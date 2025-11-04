@@ -6,7 +6,9 @@ export default function LocationMap() {
     <section className="py-20 md:py-32 px-8 md:px-16 border-t-2 border-border">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">❦</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">
+            ❦
+          </div>
           <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
             LOCUS NOSTER
           </div>
@@ -14,7 +16,8 @@ export default function LocationMap() {
             Visit Our Headquarters
           </h2>
           <p className="font-display text-lg text-muted-foreground italic">
-            Our headquarters building resides at 712 Main St in Longmont. Call upon us during operating hours—we'd be delighted to show you around.
+            Our headquarters building resides at 712 Main St in Longmont. Call
+            upon us during operating hours—we'd be delighted to show you around.
           </p>
         </div>
 
@@ -29,8 +32,10 @@ export default function LocationMap() {
                   Headquarters Location
                 </h3>
                 <p className="font-display text-muted-foreground italic">
-                  FI Collective HQ<br />
-                  712 Main St<br />
+                  FI Collective HQ
+                  <br />
+                  712 Main St
+                  <br />
                   Longmont, CO 80501
                 </p>
               </div>
@@ -62,16 +67,19 @@ export default function LocationMap() {
                 </h3>
                 <ul className="font-display text-muted-foreground space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="text-primary">✓</span> High-speed connectivity
+                    <span className="text-primary">✓</span> High-speed
+                    connectivity
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-primary">✓</span> Complimentary coffee & tea
+                    <span className="text-primary">✓</span> Complimentary coffee
+                    & tea
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-primary">✓</span> Meeting chambers
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-primary">✓</span> Quiet focus sanctuaries
+                    <span className="text-primary">✓</span> Quiet focus
+                    sanctuaries
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-primary">✓</span> Event facilities
@@ -81,10 +89,13 @@ export default function LocationMap() {
             </div>
           </Card>
 
-          <Card className="overflow-hidden rounded-sm border-2" data-testid="card-map">
+          <Card
+            className="overflow-hidden rounded-sm border-2"
+            data-testid="card-map"
+          >
             <div className="relative w-full h-[500px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.6951748382847!2d-105.10342492398154!3d40.16738297147854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bec2a2f4d3e79%3A0x9c0f0c0f0c0f0c0f!2sMain%20St%2C%20Longmont%2C%20CO!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.7039187499663!2d-105.10483122400117!3d40.171145471480166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bf941c4757bf7%3A0x686ab71f1eca3a7a!2sMMM%20HQ%20Coworking!5e0!3m2!1sen!2sus!4v1762273303555!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

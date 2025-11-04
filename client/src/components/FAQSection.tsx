@@ -21,7 +21,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "What's your investment philosophy?",
-    answer: "To vanguard the fidelity of our garden, we have a strict aversion to percentage-based investment advisors—they're like taking a percentage of your harvest every year, forever. We believe in flat-fee advisors and low-cost index fund ETFs. Let your money grow without someone else's hands constantly in your basket. Plant it, let it grow, keep what you've cultivated."
+    answer: "To vanguard the fidelity of our garden, we generally believe in flat-fee advisors and low-cost index fund ETFs. Plant it, let it grow, keep what you've cultivated. There are always exceptions—we're not a one-size-fits-all garden. We're here to help you grow your own, unique garden."
   },
   {
     question: "Do people actually work in the co-working space?",
@@ -41,7 +41,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "Tell me more about the Tuesday dinners.",
-    answer: "Every Tuesday evening, we gather for potluck harvest dinners. Bring what you've made, partake in what others have brought, share cultivation strategies, and build genuine friendships. These aren't networking events—they're family dinners amongst people who understand the journey. Many lasting partnerships and friendships grow from these weekly gatherings."
+    answer: "Every Tuesday evening, we gather for potluck harvest dinners. Bring what you've made, partake in what others have brought, share cultivation strategies, and most importantly to build genuine friendships. These aren't networking events—they're family dinners amongst people who understand the journey. Many lasting partnerships and friendships grow from these weekly gatherings."
   },
   {
     question: "What topics do your speakers address?",
