@@ -1,59 +1,84 @@
 import { Card } from "@/components/ui/card";
+import { MapPin, Clock, Coffee } from "lucide-react";
 
 export default function LocationMap() {
   return (
-    <section className="py-16 px-4 bg-muted/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <pre className="text-xl md:text-2xl font-bold text-foreground mb-4 leading-tight">
-{`┌─────────────────────┐
-│  FIND US ON MAIN ST │
-└─────────────────────┘`}
-          </pre>
+    <section className="py-24 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
+            Visit Us on Main Street
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Drop by anytime during open hours—we'd love to show you around! ☕
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <Card className="p-6">
-            <div className="space-y-4">
+          <Card className="p-8 rounded-2xl space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="bg-primary/10 p-3 rounded-xl">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
               <div>
-                <h3 className="font-mono font-bold text-base mb-2 text-foreground">
-                  ▸ LOCATION
+                <h3 className="font-display font-bold text-xl mb-2 text-foreground">
+                  Location
                 </h3>
-                <p className="font-mono text-sm text-muted-foreground">
+                <p className="text-muted-foreground">
                   FI Collective<br />
                   Main Street<br />
                   Longmont, CO 80501
                 </p>
               </div>
+            </div>
 
-              <div className="border-t border-border pt-4">
-                <h3 className="font-mono font-bold text-base mb-2 text-foreground">
-                  ▸ HOURS
-                </h3>
-                <p className="font-mono text-sm text-muted-foreground">
-                  Monday - Friday: 8:00 AM - 8:00 PM<br />
-                  Saturday: 9:00 AM - 6:00 PM<br />
-                  Sunday: 10:00 AM - 4:00 PM
-                </p>
+            <div className="flex items-start gap-4">
+              <div className="bg-primary/10 p-3 rounded-xl">
+                <Clock className="w-6 h-6 text-primary" />
               </div>
-
-              <div className="border-t border-border pt-4">
-                <h3 className="font-mono font-bold text-base mb-2 text-foreground">
-                  ▸ AMENITIES
+              <div>
+                <h3 className="font-display font-bold text-xl mb-2 text-foreground">
+                  Hours
                 </h3>
-                <ul className="font-mono text-sm text-muted-foreground space-y-1">
-                  <li>✓ High-speed WiFi</li>
-                  <li>✓ Free coffee & tea</li>
-                  <li>✓ Meeting rooms</li>
-                  <li>✓ Quiet focus areas</li>
-                  <li>✓ Event space</li>
+                <div className="text-muted-foreground space-y-1">
+                  <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+                  <p>Saturday: 9:00 AM - 6:00 PM</p>
+                  <p>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="bg-primary/10 p-3 rounded-xl">
+                <Coffee className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-xl mb-2 text-foreground">
+                  What's Included
+                </h3>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">✓</span> High-speed WiFi
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">✓</span> Free coffee & tea
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">✓</span> Meeting rooms
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">✓</span> Quiet focus areas
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">✓</span> Event space
+                  </li>
                 </ul>
               </div>
             </div>
           </Card>
 
-          <Card className="p-1 overflow-hidden" data-testid="card-map">
-            <div className="relative w-full h-[400px] bg-muted">
+          <Card className="overflow-hidden rounded-2xl" data-testid="card-map">
+            <div className="relative w-full h-[500px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.6951748382847!2d-105.10342492398154!3d40.16738297147854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876bec2a2f4d3e79%3A0x9c0f0c0f0c0f0c0f!2sMain%20St%2C%20Longmont%2C%20CO!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
                 width="100%"

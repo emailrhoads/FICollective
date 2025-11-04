@@ -1,144 +1,184 @@
 # FI Collective Design Guidelines
 
-## Design Approach: ASCII Art Brutalism
+## Design Approach: Community-First Warmth
 
-The user has specified ASCII art as the core design language - this will be our primary design direction, creating a bold, distinctive, and memorable brand identity that stands apart from typical co-working space aesthetics.
+**Reference Inspiration**: Airbnb's belonging aesthetic + Notion's approachable professionalism + community-focused platforms. Create an environment that feels like a warm invitation rather than a corporate space.
+
+**Core Principle**: Every element should answer "Does this make someone feel like they belong here?" Use rounded corners, soft shadows, generous spacing, and authentic imagery to create emotional connection.
 
 ## Typography Hierarchy
 
-**Primary Font**: `'Courier New', 'Courier', monospace` (authentic ASCII aesthetic)
-**Secondary Font**: `'IBM Plex Mono', monospace` via Google Fonts for improved readability in body text
+**Primary Font**: 'Inter' via Google Fonts (friendly, modern, highly readable)
+**Accent Font**: 'Nunito' via Google Fonts for headlines (soft, rounded, welcoming)
 
-- Hero Headlines: text-4xl md:text-6xl lg:text-7xl, font-bold, uppercase
-- Section Headers: text-2xl md:text-4xl, font-bold, uppercase
-- Subheadings: text-xl md:text-2xl, font-semibold
-- Body Text: text-base md:text-lg, font-normal, leading-relaxed
-- Captions/Small: text-sm, uppercase, tracking-wide
+- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold (Nunito)
+- Section Headers: text-3xl md:text-4xl lg:text-5xl, font-bold (Nunito)
+- Subheadings: text-xl md:text-2xl, font-semibold (Inter)
+- Body Text: text-base md:text-lg, leading-relaxed (Inter)
+- Captions: text-sm md:text-base, font-medium
 
-All type should embrace the monospaced character, with ASCII decorative elements (borders, dividers, icons) integrated directly into text layouts.
+All text maintains warmth through generous line-height (leading-relaxed to leading-loose) and comfortable letter-spacing.
 
 ## Layout System
 
-**Spacing Units**: Use Tailwind's 4, 8, 12, 16, 24 units consistently (p-4, m-8, gap-12, etc.)
+**Spacing Units**: Tailwind 4, 8, 12, 16, 24, 32 (e.g., p-8, gap-12, py-24)
 
 **Container Strategy**:
-- Max width: max-w-6xl for content sections
-- Full-width: w-full for ASCII art backgrounds and decorative elements
-- Padding: px-4 md:px-8 lg:px-12 for consistent gutters
+- Content sections: max-w-7xl mx-auto
+- Text-focused areas: max-w-4xl mx-auto
+- Full-width: w-full for image sections
+- Padding: px-6 md:px-12 lg:px-16
 
-**Grid Patterns**:
-- Mobile: Single column (grid-cols-1)
-- Tablet: 2 columns where appropriate (md:grid-cols-2)
-- Desktop: 3 columns for feature grids (lg:grid-cols-3)
-
-## ASCII Art Integration
-
-**Navigation**: ASCII art logo using text characters (e.g., stylized "FI" in block letters)
-
-**Decorative Elements**:
-- Border frames around sections using characters like `─`, `│`, `┌`, `┐`, `└`, `┘`
-- Dividers between sections using repeated characters: `═══`, `───`, `···`
-- Bullet points as ASCII symbols: `▸`, `►`, `•`, `→`
-- Icons represented as ASCII art: dollar signs for pricing, buildings for location, people for community
-
-**Section Backgrounds**: Subtle ASCII patterns (dots, dashes, crosses) as textured backgrounds with reduced opacity
+**Border Radius**: Embrace curves consistently:
+- Cards/Containers: rounded-2xl to rounded-3xl
+- Buttons: rounded-full
+- Images: rounded-xl to rounded-2xl
+- Small elements: rounded-lg
 
 ## Component Library
 
-**Hero Section** (Home Page):
-- Full viewport height section with large ASCII art "FI COLLECTIVE" text art
-- Monospaced tagline explaining financial independence community
-- ASCII-bordered CTA button
-- Subtle animated ASCII rain/matrix effect background (minimal, not distracting)
+### Hero Section (Home Page)
+- Full-width high-fidelity image showing people collaborating warmly in the space
+- Image overlay with subtle gradient for text legibility
+- Centered headline emphasizing belonging and community
+- Descriptive subheading about financial independence community
+- Two CTAs: primary "Join Our Community" + secondary "Take a Tour" with blurred background treatment on buttons
+- Floating testimonial badge in corner: "Where FI meets community" with soft shadow
 
-**Feature Cards**:
-- Bordered boxes using ASCII line characters
-- Icon area with ASCII art symbols
-- Title in uppercase monospace
-- Description in readable mono font
-- Hover state: slight border thickness increase
+### Welcome/About Section
+- Two-column layout (lg:grid-cols-2) with generous gap-16
+- Left: Warm, candid photo of members chatting over coffee (rounded-2xl)
+- Right: Welcoming copy explaining FI Collective's mission
+- Pull quote or stat highlighted in larger text with soft background
+- Subtle decorative element: small illustrated icons (coffee cups, plants, books)
 
-**FAQ Accordion**:
-- Collapsible sections with ASCII arrow indicators (`▸` closed, `▾` open)
-- Bordered question panels
-- Monospaced answers with adequate line height
+### Space Features Grid
+- Three-column layout (lg:grid-cols-3, md:grid-cols-2)
+- Each card: rounded-2xl with soft shadow, hover: shadow-xl transition
+- High-quality photos of specific amenities (kitchen, focus rooms, collaboration areas)
+- Icon + title + short description structure
+- Icons from Heroicons (outline style for friendliness)
+- Ample padding within cards (p-8)
 
-**Join/Membership Section**:
-- Pricing tiers in ASCII-bordered cards
-- Dollar signs as decorative elements
-- Feature lists with ASCII checkmarks (`✓` or `[✓]`)
-- CTA buttons with ASCII brackets: `[ JOIN NOW ]`
+### Community Showcase
+- Masonry-style photo grid or 4-column gallery
+- Authentic images: members working together, community events, casual conversations
+- Each image: rounded-xl with subtle hover scale effect
+- Optional caption overlay on hover showing context
+- Diverse representation showing inclusive, welcoming environment
 
-**Map Integration**:
-- Embedded Google Maps with custom ASCII-styled marker
-- Border frame around map using ASCII art
-- Location details in monospaced text
-- Address formatted with ASCII dividers
+### Membership Tiers
+- Two or three cards in row (max-w-6xl container)
+- Each tier: rounded-3xl card with generous padding (p-10)
+- Warm illustrative icons for each tier
+- Feature lists with checkmark icons (Heroicons check-circle)
+- Pricing displayed prominently but not aggressively
+- CTA button per tier: rounded-full with appropriate visual weight
+- Recommended tier gets subtle highlight treatment
 
-**Footer**:
-- ASCII art divider line
-- Contact info, social links with ASCII icons
-- Copyright in small mono font
-- Possible ASCII art mountain range or geometric pattern
+### Location/Visit Section
+- Split layout: embedded Google Maps (rounded-2xl) + location details
+- Address, hours, parking info in friendly, scannable format
+- Small location photos showing neighborhood context (coffee shops nearby, etc.)
+- "Come visit us" CTA encouraging drop-ins
+- Contact info with icons for phone, email
 
-## Navigation
+### Testimonials/Social Proof
+- Card-based carousel or 2-3 column grid
+- Each testimonial: rounded-2xl card with soft shadow
+- Member photo (circular, border-4 with subtle treatment)
+- Quote in comfortable reading size
+- Name, role/background, membership duration
+- Authentic, diverse member representation
 
-**Desktop**: Horizontal menu with ASCII dividers between items (`|` or `//`)
-**Mobile**: Hamburger menu using ASCII art (`≡` or stacked `─` lines)
-**Active State**: ASCII underline or brackets around current page `[ HOME ]`
+### FAQ Section (Separate Page)
+- Accordion with generous spacing between items (space-y-6)
+- Each item: rounded-xl with soft background on expand
+- Icons for categories (Heroicons)
+- Questions in semibold, answers in relaxed body text
+- Grouped by category with clear visual separation
+
+### Footer
+- Generous padding (py-16 to py-24)
+- Three-column layout on desktop: About snippet, Quick Links, Connect
+- Newsletter signup with friendly microcopy and rounded-full input
+- Social media icons (Heroicons or Font Awesome)
+- Small community stat badges: "X active members" "Since 20XX"
+- Secondary navigation and legal links in smaller text
 
 ## Images
 
-This design is primarily ASCII art-based with minimal photographic imagery to maintain the bold, distinctive aesthetic.
+**Hero Image**: Essential - full-width, high-quality photo showing members in the space engaging warmly. Should capture energy and belonging.
 
-**Hero Section**: No large hero image - instead, use large-scale ASCII art text treatment with subtle animated background pattern
+**Section Images Throughout**:
+- Space photography: natural lighting, lived-in feel, authentic (not staged)
+- Member interactions: candid moments of collaboration, conversation, learning
+- Detail shots: coffee being made, plants, cozy corners, whiteboards in use
+- Neighborhood context: nearby cafes, outdoor spaces, Main Street charm
+- All images professionally shot, high resolution, consistent warm tone
 
-**Location Map**: Required - embed Google Maps iframe showing Longmont Main Street location with custom ASCII-styled map marker if possible
+**Image Treatment**:
+- Rounded corners throughout (rounded-xl to rounded-2xl)
+- Subtle soft shadows for depth
+- Natural, warm lighting in photos
+- People should look genuine and engaged, not posed
+- Diverse representation across all imagery
 
-**Optional Supporting Images**: 
-- Small thumbnail photos of the physical space in bordered frames (ASCII art borders)
-- Team photos in ASCII-bordered containers if needed
-- All images should have monochrome or duotone treatment to match ASCII aesthetic
+## Navigation
 
-## Page-Specific Layouts
+**Desktop**: 
+- Sticky header with soft shadow on scroll
+- Logo left (wordmark or simple graphic)
+- Center or right-aligned menu items with comfortable spacing
+- "Join" CTA as distinct rounded-full button
+- Smooth transitions on interactions
 
-**Home Page** (5-6 sections):
-1. Hero with ASCII art headline and mission statement
-2. What is FI? section with ASCII-bordered explanation
-3. Community benefits in 3-column grid with ASCII icons
-4. Space features showcase
-5. Location with embedded map
-6. CTA to join
+**Mobile**: 
+- Hamburger icon (Heroicons) 
+- Full-screen overlay menu with large, touchable items
+- Rounded-full close button
+- Vertical stack with generous spacing
 
-**FAQ Page**:
-- ASCII art page header
-- Collapsible accordion sections grouped by category
-- ASCII decorative elements between categories
-- Footer CTA to join page
+## Page Structure
 
-**Join Page**:
-- Membership tier comparison in bordered cards
-- Benefits checklist with ASCII checkmarks
-- Application/contact form with ASCII-styled inputs
-- Clear pricing display with ASCII dollar art
+### Home Page (7-8 sections):
+1. Hero with high-impact community image
+2. Welcome/What is FI Collective
+3. Space Features (3-column grid)
+4. Community Showcase (photo gallery)
+5. Why Choose FI (benefits/values)
+6. Membership Options
+7. Location & Visit section
+8. Final CTA with testimonial snippet
+
+### FAQ Page:
+- Hero section with friendly headline
+- Category navigation if extensive FAQs
+- Accordion sections with generous spacing
+- Related resources or next steps sidebar
+- CTA to join or contact
+
+### Join/Membership Page:
+- Brief welcoming intro section
+- Detailed tier comparison
+- Application or contact form with friendly labels
+- Process timeline/what to expect
+- Additional community benefits highlighted
 
 ## Interactions
 
-**Minimal Animation Strategy**:
-- Subtle ASCII character rotation on logo
-- Smooth accordion expand/collapse
-- Gentle hover states on cards (border glow or thickness change)
-- NO parallax, NO scroll-triggered animations
-- Button hover: slight background change within ASCII borders
+**Gentle, Welcoming Animations**:
+- Smooth transitions on hover (duration-300)
+- Cards lift slightly on hover (hover:shadow-xl)
+- Buttons have subtle scale on hover (hover:scale-105)
+- Accordion smooth expand/collapse
+- NO aggressive animations, maintain calm atmosphere
 
 ## Accessibility
 
-- Maintain AA contrast ratios despite monospace aesthetic
-- Ensure ASCII art is decorative only (use aria-hidden)
-- Provide semantic HTML structure beneath visual ASCII treatment
-- Form inputs with clear labels, not just ASCII placeholders
-- Focus states visible with ASCII-bordered highlights
-
-## Brand Personality
-
-Bold, unconventional, transparent, community-focused, tech-savvy, rebellious against corporate co-working aesthetics. The ASCII art approach signals: "We're different, we're honest, we're for people who think differently about money and community."
+- AA contrast maintained throughout
+- All images have descriptive alt text
+- Form labels clearly visible, not placeholder-only
+- Focus states: visible outline with rounded corners matching design
+- Semantic HTML structure with proper heading hierarchy
+- Touch targets minimum 44x44px
