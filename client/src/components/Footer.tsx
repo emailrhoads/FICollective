@@ -68,7 +68,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span className="italic">FI Collective HQ<br />Main Street<br />Longmont, CO 80501</span>
+                <span className="italic">FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
               </li>
             </ul>
           </div>

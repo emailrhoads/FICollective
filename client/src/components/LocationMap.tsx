@@ -14,7 +14,7 @@ export default function LocationMap() {
             Visit Our Headquarters
           </h2>
           <p className="font-display text-lg text-muted-foreground italic">
-            Our headquarters building resides on Main Street in Longmont. Call upon us during operating hours—we'd be delighted to show you around.
+            Our headquarters building resides at 712 Main St in Longmont. Call upon us during operating hours—we'd be delighted to show you around.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function LocationMap() {
                 </h3>
                 <p className="font-display text-muted-foreground italic">
                   FI Collective HQ<br />
-                  Main Street<br />
+                  712 Main St<br />
                   Longmont, CO 80501
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function LocationMap() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="FI Collective Headquarters on Main Street, Longmont"
+                title="FI Collective Headquarters at 712 Main St, Longmont"
               />
             </div>
           </Card>

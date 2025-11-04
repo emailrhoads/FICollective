@@ -35,7 +35,7 @@ export default function Hero() {
         <p className="font-display text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-loose italic">
           Plant seeds of intentional planning. Tend your investments with care.<br className="hidden md:block" />
           Harvest what you've grown. Partake in the fruits of our labor<br className="hidden md:block" />
-          amongst friends at our headquarters on Main Street in Longmont, Colorado.
+          amongst friends at 712 Main St in Longmont, Colorado.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
