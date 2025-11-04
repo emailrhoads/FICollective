@@ -1,6 +1,6 @@
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ZoomLink from "./ZoomLink";
 
@@ -11,28 +11,25 @@ export default function Navigation() {
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/faq", label: "FAQ" },
-    { path: "/join", label: "Join Us" },
+    { path: "/join", label: "Membership" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-20">
-          <ZoomLink href="/" className="flex items-center gap-3 hover-elevate active-elevate-2 px-3 py-2 rounded-full cursor-pointer">
-            <div className="bg-primary/10 p-2 rounded-full">
-              <Heart className="w-5 h-5 text-primary fill-primary" />
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">
+        <div className="flex items-center justify-between h-16">
+          <ZoomLink href="/" className="flex items-center gap-2 hover-elevate active-elevate-2 px-3 py-2 rounded-lg cursor-pointer">
+            <span className="font-display font-bold text-xl text-foreground tracking-tight">
               FI Collective
             </span>
           </ZoomLink>
 
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <ZoomLink key={item.path} href={item.path}>
                 <Button
                   variant={location === item.path ? "secondary" : "ghost"}
-                  className="rounded-full font-medium"
+                  className="rounded-lg font-medium"
                   data-testid={`link-nav-${item.label.toLowerCase().replace(' ', '-')}`}
                 >
                   {item.label}
@@ -44,7 +41,7 @@ export default function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden rounded-full"
+            className="md:hidden rounded-lg"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
           >
@@ -59,7 +56,7 @@ export default function Navigation() {
                 <ZoomLink key={item.path} href={item.path}>
                   <Button
                     variant={location === item.path ? "secondary" : "ghost"}
-                    className="w-full rounded-full justify-start"
+                    className="w-full rounded-lg justify-start"
                     onClick={() => setMobileMenuOpen(false)}
                     data-testid={`link-mobile-nav-${item.label.toLowerCase().replace(' ', '-')}`}
                   >

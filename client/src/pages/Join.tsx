@@ -31,14 +31,14 @@ export default function Join() {
       <PageTransition location={location}>
         <main className="flex-1">
           <div className="py-20 px-6 text-center bg-gradient-to-b from-muted/30 to-transparent">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6">
               <UserPlus className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6">
-              Join Our Community
+            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6 tracking-tight">
+              Become a Member
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Start your journey with people who value financial independence and intentional living.
+              Join a community of professionals pursuing financial independence through smart planning and mutual support
             </p>
           </div>
 
@@ -47,15 +47,15 @@ export default function Join() {
           <section className="py-24 px-6">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4">
+                <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 tracking-tight">
                   Get in Touch
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Ready to join? Have questions? Fill out the form below and we'll get back to you soon.
+                  Ready to join? Have questions? Fill out the form and we'll get back to you soon.
                 </p>
               </div>
 
-              <Card className="p-8 md:p-10 rounded-3xl shadow-lg">
+              <Card className="p-8 md:p-10 rounded-lg shadow-lg">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-base font-semibold">
@@ -65,7 +65,7 @@ export default function Join() {
                       id="name"
                       type="text"
                       required
-                      className="rounded-xl h-12"
+                      className="rounded-lg h-11"
                       placeholder="Your full name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -81,7 +81,7 @@ export default function Join() {
                       id="email"
                       type="email"
                       required
-                      className="rounded-xl h-12"
+                      className="rounded-lg h-11"
                       placeholder="your.email@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -96,7 +96,7 @@ export default function Join() {
                     <Input
                       id="phone"
                       type="tel"
-                      className="rounded-xl h-12"
+                      className="rounded-lg h-11"
                       placeholder="(555) 123-4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -110,7 +110,7 @@ export default function Join() {
                     </Label>
                     <Textarea
                       id="message"
-                      className="rounded-xl min-h-32 resize-none"
+                      className="rounded-lg min-h-32 resize-none"
                       placeholder="What brings you to FI Collective? Where are you on your FI journey?"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -120,7 +120,7 @@ export default function Join() {
 
                   <Button 
                     type="submit" 
-                    className="w-full rounded-full h-12 text-base" 
+                    className="w-full rounded-lg h-11 text-base" 
                     size="lg"
                     data-testid="button-submit-contact"
                   >

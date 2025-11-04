@@ -19,8 +19,8 @@ const tiers: Tier[] = [
       "High-speed WiFi",
       "Coffee & tea",
       "Meeting room access",
-      "Community events",
-      "Locker rental available"
+      "All community events",
+      "Locker available"
     ]
   },
   {
@@ -32,23 +32,23 @@ const tiers: Tier[] = [
       "High-speed WiFi",
       "Coffee & tea",
       "Priority meeting rooms",
-      "24/7 access",
-      "Community events",
-      "Free locker"
+      "24/7 building access",
+      "All community events",
+      "Dedicated locker"
     ]
   },
   {
     name: "Dedicated Desk",
     price: "$299",
     features: [
-      "Your own desk",
+      "Your own desk space",
       "Unlimited access",
       "High-speed WiFi",
       "Coffee & tea",
       "Priority meeting rooms",
-      "24/7 access",
-      "Community events",
-      "Locking desk drawer",
+      "24/7 building access",
+      "All community events",
+      "Locking storage",
       "Monitor included"
     ]
   }
@@ -63,23 +63,23 @@ export default function MembershipTiers() {
     <section className="py-24 px-6 md:px-12 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Choose Your Membership
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4 tracking-tight">
+            Membership Options
           </h2>
           <p className="text-lg text-muted-foreground">
             Flexible plans that fit your schedule and goals
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {tiers.map((tier, index) => (
             <Card
               key={index}
-              className={`p-8 hover-elevate hover:shadow-xl transition-all duration-300 rounded-3xl relative ${tier.popular ? 'border-primary border-2' : ''}`}
+              className={`p-8 hover-elevate hover:shadow-xl transition-all duration-300 rounded-lg relative ${tier.popular ? 'border-primary border-2' : ''}`}
               data-testid={`card-tier-${tier.name.toLowerCase().replace(' ', '-')}`}
             >
               {tier.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-4 py-1">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md px-3 py-1">
                   Most Popular
                 </Badge>
               )}
@@ -90,7 +90,7 @@ export default function MembershipTiers() {
                     {tier.name}
                   </h3>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl font-bold text-foreground">
+                    <span className="text-4xl font-bold text-foreground">
                       {tier.price}
                     </span>
                     <span className="text-muted-foreground">
@@ -114,7 +114,7 @@ export default function MembershipTiers() {
                 </ul>
 
                 <Button
-                  className="w-full rounded-full"
+                  className="w-full rounded-lg"
                   variant={tier.popular ? "default" : "outline"}
                   size="lg"
                   onClick={() => handleJoin(tier.name)}
@@ -127,11 +127,11 @@ export default function MembershipTiers() {
           ))}
         </div>
 
-        <Card className="p-8 max-w-2xl mx-auto rounded-2xl text-center bg-accent/50">
+        <Card className="p-8 max-w-2xl mx-auto rounded-lg text-center bg-muted/50">
           <p className="text-foreground mb-4 font-semibold">
-            Not sure yet? Try a day pass for just $25
+            Not sure yet? Try a day pass for $25
           </p>
-          <Button variant="outline" className="rounded-full" data-testid="button-day-pass">
+          <Button variant="outline" className="rounded-lg" data-testid="button-day-pass">
             Get a Day Pass
           </Button>
         </Card>

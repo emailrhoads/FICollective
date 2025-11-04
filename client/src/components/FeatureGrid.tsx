@@ -1,29 +1,32 @@
 import { Card } from "@/components/ui/card";
-import financialIcon from "@assets/generated_images/Financial_growth_icon_59a3941a.png";
-import communityIcon from "@assets/generated_images/Community_circle_icon_f9833897.png";
-import spaceIcon from "@assets/generated_images/Cozy_space_icon_08748eb3.png";
+import { Wifi, Coffee, Users, Clock } from "lucide-react";
 
 interface Feature {
-  icon: string;
+  icon: typeof Wifi;
   title: string;
   description: string;
 }
 
 const features: Feature[] = [
   {
-    icon: financialIcon,
-    title: "Build Your Wealth",
-    description: "Connect with people who share your FI goals. Learn strategies, share insights, and accelerate your journey to financial freedom together."
+    icon: Wifi,
+    title: "Premium Workspace",
+    description: "High-speed WiFi, quiet focus areas, collaboration spaces, and meeting rooms designed for productivity."
   },
   {
-    icon: spaceIcon,
-    title: "Work in Comfort",
-    description: "A thoughtfully designed co-working space with everything you need—fast WiFi, cozy nooks, collaboration areas, and all-day coffee."
+    icon: Coffee,
+    title: "All-Day Amenities",
+    description: "Unlimited coffee, tea, and snacks. Fully equipped kitchen for member use. Comfortable lounge areas."
   },
   {
-    icon: communityIcon,
-    title: "Find Your People",
-    description: "Monthly workshops, casual meetups, and spontaneous lunch conversations with folks who truly understand your financial independence journey."
+    icon: Users,
+    title: "Active Community",
+    description: "150+ members pursuing FI through diverse paths—entrepreneurs, professionals, early retirees, and career transitioners."
+  },
+  {
+    icon: Clock,
+    title: "Flexible Access",
+    description: "Extended hours and 24/7 access options. Work when it suits your schedule and lifestyle."
   }
 ];
 
@@ -31,40 +34,29 @@ export default function FeatureGrid() {
   return (
     <section className="py-24 px-6 md:px-12 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Why FI Collective?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            More than just a workspace—it's where your financial independence community comes together.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="p-8 hover-elevate hover:shadow-xl transition-all duration-300 rounded-2xl border-card-border" 
-              data-testid={`card-feature-${index}`}
-            >
-              <div className="space-y-6">
-                <div className="w-20 h-20 rounded-2xl bg-primary/10 p-4 flex items-center justify-center">
-                  <img 
-                    src={feature.icon} 
-                    alt="" 
-                    className="w-full h-full object-contain"
-                    aria-hidden="true"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <Card 
+                key={index} 
+                className="p-8 hover-elevate hover:shadow-lg transition-all duration-300 rounded-lg border-border" 
+                data-testid={`card-feature-${index}`}
+              >
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <IconComponent className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="font-display font-bold text-2xl text-foreground">
-                  {feature.title}
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>

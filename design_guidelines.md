@@ -1,184 +1,169 @@
 # FI Collective Design Guidelines
 
-## Design Approach: Community-First Warmth
+## Design Approach: Sophisticated Community Hub
 
-**Reference Inspiration**: Airbnb's belonging aesthetic + Notion's approachable professionalism + community-focused platforms. Create an environment that feels like a warm invitation rather than a corporate space.
+**Reference Inspiration**: Linear's precision + Stripe's credibility + Notion's approachability. Create a professional environment that inspires trust while fostering genuine connection.
 
-**Core Principle**: Every element should answer "Does this make someone feel like they belong here?" Use rounded corners, soft shadows, generous spacing, and authentic imagery to create emotional connection.
+**Core Principle**: Every element should communicate value and credibility while maintaining human warmth. Use refined typography, strategic white space, and professional imagery to establish authority in financial independence and community building.
 
 ## Typography Hierarchy
 
-**Primary Font**: 'Inter' via Google Fonts (friendly, modern, highly readable)
-**Accent Font**: 'Nunito' via Google Fonts for headlines (soft, rounded, welcoming)
+**Primary Font**: 'Inter' via Google Fonts (professional, highly readable)
+**Accent Font**: 'DM Sans' via Google Fonts for headlines (modern, clean, sophisticated)
 
-- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold (Nunito)
-- Section Headers: text-3xl md:text-4xl lg:text-5xl, font-bold (Nunito)
+- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight (DM Sans)
+- Section Headers: text-3xl md:text-4xl lg:text-5xl, font-bold, tracking-tight (DM Sans)
 - Subheadings: text-xl md:text-2xl, font-semibold (Inter)
 - Body Text: text-base md:text-lg, leading-relaxed (Inter)
-- Captions: text-sm md:text-base, font-medium
+- Captions: text-sm, font-medium, tracking-wide uppercase for labels
 
-All text maintains warmth through generous line-height (leading-relaxed to leading-loose) and comfortable letter-spacing.
+Maintain professionalism through tight tracking on headlines and generous leading on body text for comfortable readability.
 
 ## Layout System
 
-**Spacing Units**: Tailwind 4, 8, 12, 16, 24, 32 (e.g., p-8, gap-12, py-24)
+**Spacing Units**: Tailwind 6, 8, 12, 16, 24, 32, 48 (e.g., p-8, gap-16, py-32)
 
 **Container Strategy**:
-- Content sections: max-w-7xl mx-auto
-- Text-focused areas: max-w-4xl mx-auto
-- Full-width: w-full for image sections
-- Padding: px-6 md:px-12 lg:px-16
+- Content sections: max-w-7xl mx-auto px-6 md:px-12
+- Text-focused areas: max-w-3xl mx-auto
+- Wide layouts: max-w-[1400px] for photo grids
+- Vertical rhythm: py-24 md:py-32 for major sections
 
-**Border Radius**: Embrace curves consistently:
-- Cards/Containers: rounded-2xl to rounded-3xl
-- Buttons: rounded-full
-- Images: rounded-xl to rounded-2xl
-- Small elements: rounded-lg
+**Border Radius**: Professional refinement:
+- Cards/Containers: rounded-xl
+- Buttons: rounded-lg
+- Images: rounded-lg
+- Small elements: rounded-md
 
 ## Component Library
 
-### Hero Section (Home Page)
-- Full-width high-fidelity image showing people collaborating warmly in the space
-- Image overlay with subtle gradient for text legibility
-- Centered headline emphasizing belonging and community
-- Descriptive subheading about financial independence community
-- Two CTAs: primary "Join Our Community" + secondary "Take a Tour" with blurred background treatment on buttons
-- Floating testimonial badge in corner: "Where FI meets community" with soft shadow
+### Hero Section
+- 90vh height with professional high-quality image: members collaborating in modern workspace setting, natural lighting, professional attire
+- Subtle dark gradient overlay (opacity-40) for text contrast
+- Centered content with max-w-4xl
+- Headline emphasizing financial independence + community value
+- Descriptive subheading highlighting key differentiators: "Weekly dinners, expert speakers, skill workshops, and community impact"
+- Two CTAs: primary "Become a Member" + secondary "Schedule a Tour" with blurred-background treatment (backdrop-blur-sm bg-white/10)
+- Small trust indicator below CTAs: "Active community of 150+ professionals"
 
-### Welcome/About Section
-- Two-column layout (lg:grid-cols-2) with generous gap-16
-- Left: Warm, candid photo of members chatting over coffee (rounded-2xl)
-- Right: Welcoming copy explaining FI Collective's mission
-- Pull quote or stat highlighted in larger text with soft background
-- Subtle decorative element: small illustrated icons (coffee cups, plants, books)
+### Value Proposition Grid
+- Four-column layout (lg:grid-cols-4, md:grid-cols-2) with gap-8
+- Each card: minimal border, rounded-xl, p-8
+- Icon from Heroicons (24x24, outline style)
+- Bold title: "Weekly Dinners" | "Speaker Series" | "Skill Workshops" | "Community Activism"
+- Concise description emphasizing tangible benefits
+- Hover state: subtle shadow elevation
+
+### About/Mission Section
+- Two-column layout (lg:grid-cols-2) with gap-16, items-center
+- Left: Professional image of community event (speaker presentation or workshop in action), rounded-lg
+- Right: Mission statement with clear hierarchy
+- Key stats highlighted: "Since 20XX" | "150+ Members" | "50+ Events Annually"
+- CTA: "Our Story" link with arrow icon
+
+### Program Showcase
+- Three large sections stacked vertically, alternating image/text placement
+- Section 1 (Community Events): Image right showing dinner gathering, text left describing weekly dinners + holiday parties
+- Section 2 (Learning & Growth): Image left showing speaker at podium, text right about speaker series + workshops (finance, sustainability, passion projects)
+- Section 3 (Impact): Image right showing volunteer activity, text left about community activism
+- Each section: py-24, max-w-7xl container, lg:grid-cols-2 with gap-16
+- Professional typography hierarchy, bullet points with check icons for features
 
 ### Space Features Grid
-- Three-column layout (lg:grid-cols-3, md:grid-cols-2)
-- Each card: rounded-2xl with soft shadow, hover: shadow-xl transition
-- High-quality photos of specific amenities (kitchen, focus rooms, collaboration areas)
-- Icon + title + short description structure
-- Icons from Heroicons (outline style for friendliness)
-- Ample padding within cards (p-8)
-
-### Community Showcase
-- Masonry-style photo grid or 4-column gallery
-- Authentic images: members working together, community events, casual conversations
-- Each image: rounded-xl with subtle hover scale effect
-- Optional caption overlay on hover showing context
-- Diverse representation showing inclusive, welcoming environment
+- Three-column layout (lg:grid-cols-3) with gap-12
+- High-quality photos of amenities: focus rooms, collaboration spaces, event area, kitchen
+- Each card: Image top (aspect-video), content p-6
+- Title + description structure
+- Professional shadow on hover
 
 ### Membership Tiers
-- Two or three cards in row (max-w-6xl container)
-- Each tier: rounded-3xl card with generous padding (p-10)
-- Warm illustrative icons for each tier
-- Feature lists with checkmark icons (Heroicons check-circle)
-- Pricing displayed prominently but not aggressively
-- CTA button per tier: rounded-full with appropriate visual weight
-- Recommended tier gets subtle highlight treatment
+- Three cards horizontal (max-w-6xl container, lg:grid-cols-3)
+- Each tier: rounded-xl, border, p-8
+- Clear tier names: "Core" | "Professional" | "Founder"
+- Pricing prominent but refined (text-4xl font-bold)
+- Feature list with Heroicons check-circle (20x20)
+- Benefits clearly listed: access hours, event inclusion, guest privileges
+- CTA per tier: rounded-lg, full-width
+- Most popular tier: subtle border accent, badge "Most Popular"
 
-### Location/Visit Section
-- Split layout: embedded Google Maps (rounded-2xl) + location details
-- Address, hours, parking info in friendly, scannable format
-- Small location photos showing neighborhood context (coffee shops nearby, etc.)
-- "Come visit us" CTA encouraging drop-ins
-- Contact info with icons for phone, email
-
-### Testimonials/Social Proof
-- Card-based carousel or 2-3 column grid
-- Each testimonial: rounded-2xl card with soft shadow
-- Member photo (circular, border-4 with subtle treatment)
-- Quote in comfortable reading size
-- Name, role/background, membership duration
-- Authentic, diverse member representation
+### Testimonials
+- Two-column grid (lg:grid-cols-2) with gap-12, max-w-6xl
+- Each testimonial: rounded-xl, p-8, border
+- Member photo (w-16 h-16 rounded-full) + quote
+- Name, professional title/background below
+- Focus on professional credibility and community value
 
 ### FAQ Section (Separate Page)
-- Accordion with generous spacing between items (space-y-6)
-- Each item: rounded-xl with soft background on expand
-- Icons for categories (Heroicons)
-- Questions in semibold, answers in relaxed body text
-- Grouped by category with clear visual separation
+- Hero with "Frequently Asked Questions" headline
+- Category tabs: Membership | Space | Events | Community
+- Accordion items with gap-6, rounded-lg
+- Questions in semibold, answers in body text
+- Grouped logically with clear visual separation
+- Sidebar: Contact info, "Still have questions?" CTA
+
+### Events Calendar Preview
+- Horizontal timeline or card grid showing upcoming events
+- Event cards: rounded-lg, p-6, border
+- Date/time prominent, event type label (Workshop | Dinner | Speaker)
+- Brief description + RSVP indicator
+- Link to full calendar page
+
+### Location Section
+- Split layout: 60% embedded Google Maps (rounded-lg) | 40% details
+- Address, hours, parking clearly formatted
+- Small gallery: 3-4 photos showing building exterior, neighborhood, nearby amenities
+- "Visit Us" CTA encouraging tours
 
 ### Footer
-- Generous padding (py-16 to py-24)
-- Three-column layout on desktop: About snippet, Quick Links, Connect
-- Newsletter signup with friendly microcopy and rounded-full input
-- Social media icons (Heroicons or Font Awesome)
-- Small community stat badges: "X active members" "Since 20XX"
-- Secondary navigation and legal links in smaller text
+- Four-column layout (lg:grid-cols-4): About | Programs | Resources | Connect
+- Brief mission statement under About
+- Newsletter signup: single-line form with rounded-lg input + button
+- Social media icons (Heroicons, 24x24)
+- Secondary nav + legal links in smaller text
+- Total padding: py-16
 
 ## Images
 
-**Hero Image**: Essential - full-width, high-quality photo showing members in the space engaging warmly. Should capture energy and belonging.
+**Hero Image**: Full-width professional photograph of members collaborating in the coworking space. Should show diverse professionals engaged in meaningful work/discussion, natural lighting, modern workspace aesthetic. High resolution, editorial quality.
 
-**Section Images Throughout**:
-- Space photography: natural lighting, lived-in feel, authentic (not staged)
-- Member interactions: candid moments of collaboration, conversation, learning
-- Detail shots: coffee being made, plants, cozy corners, whiteboards in use
-- Neighborhood context: nearby cafes, outdoor spaces, Main Street charm
-- All images professionally shot, high resolution, consistent warm tone
-
-**Image Treatment**:
-- Rounded corners throughout (rounded-xl to rounded-2xl)
-- Subtle soft shadows for depth
-- Natural, warm lighting in photos
-- People should look genuine and engaged, not posed
-- Diverse representation across all imagery
+**Throughout Site**:
+- Event photography: speaker presentations, workshop sessions, dinner gatherings (candid but polished)
+- Space photography: clean, well-lit shots of different areas - focus rooms, collaboration zones, event space
+- Community activism: volunteering activities showing members making impact
+- Detail shots: professional equipment, quality furniture, thoughtful design elements
+- All images: professional grade, consistent color grading, natural lighting
+- Image treatment: rounded-lg corners, subtle shadows for depth
+- Diverse representation showing inclusive professional community
 
 ## Navigation
 
-**Desktop**: 
-- Sticky header with soft shadow on scroll
-- Logo left (wordmark or simple graphic)
-- Center or right-aligned menu items with comfortable spacing
-- "Join" CTA as distinct rounded-full button
-- Smooth transitions on interactions
+**Desktop**: Sticky header (backdrop-blur-md), subtle shadow on scroll
+- Logo left (professional wordmark)
+- Center menu: About | Programs | Space | Events | FAQ
+- Right: "Schedule Tour" link + "Join" CTA button (rounded-lg)
+- Clean spacing, professional typography
 
-**Mobile**: 
-- Hamburger icon (Heroicons) 
-- Full-screen overlay menu with large, touchable items
-- Rounded-full close button
-- Vertical stack with generous spacing
-
-## Page Structure
-
-### Home Page (7-8 sections):
-1. Hero with high-impact community image
-2. Welcome/What is FI Collective
-3. Space Features (3-column grid)
-4. Community Showcase (photo gallery)
-5. Why Choose FI (benefits/values)
-6. Membership Options
-7. Location & Visit section
-8. Final CTA with testimonial snippet
-
-### FAQ Page:
-- Hero section with friendly headline
-- Category navigation if extensive FAQs
-- Accordion sections with generous spacing
-- Related resources or next steps sidebar
-- CTA to join or contact
-
-### Join/Membership Page:
-- Brief welcoming intro section
-- Detailed tier comparison
-- Application or contact form with friendly labels
-- Process timeline/what to expect
-- Additional community benefits highlighted
+**Mobile**: Hamburger icon (Heroicons bars-3), full-screen overlay
+- Large touchable menu items
+- Vertical stack with py-6 spacing per item
+- Close button (x-mark icon)
 
 ## Interactions
 
-**Gentle, Welcoming Animations**:
-- Smooth transitions on hover (duration-300)
-- Cards lift slightly on hover (hover:shadow-xl)
-- Buttons have subtle scale on hover (hover:scale-105)
-- Accordion smooth expand/collapse
-- NO aggressive animations, maintain calm atmosphere
+**Professional, Purposeful Animations**:
+- Smooth transitions (duration-300)
+- Cards subtle shadow on hover
+- Buttons scale-105 on hover
+- Accordion smooth expand
+- Scroll-triggered fade-in for sections (subtle, once)
+- No aggressive or distracting animations
 
 ## Accessibility
 
-- AA contrast maintained throughout
-- All images have descriptive alt text
-- Form labels clearly visible, not placeholder-only
-- Focus states: visible outline with rounded corners matching design
-- Semantic HTML structure with proper heading hierarchy
-- Touch targets minimum 44x44px
+- AA contrast throughout
+- Descriptive alt text for all images
+- Form labels visible and clear
+- Focus states: visible outline (ring-2) matching brand
+- Semantic HTML with proper heading hierarchy
+- Minimum 44x44px touch targets
+- Skip to main content link

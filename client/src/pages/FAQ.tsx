@@ -16,14 +16,14 @@ export default function FAQ() {
       <PageTransition location={location}>
         <main className="flex-1">
           <div className="py-20 px-6 text-center bg-gradient-to-b from-muted/30 to-transparent">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6">
               <HelpCircle className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6">
+            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6 tracking-tight">
               Questions & Answers
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Got questions? We've got answers. Learn everything about joining our community.
+              Learn everything about our community, programs, and membership options
             </p>
           </div>
 
@@ -31,19 +31,19 @@ export default function FAQ() {
 
           <div className="py-24 px-6 bg-muted/30">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground tracking-tight">
                 Still have questions?
               </h2>
               <p className="text-lg text-muted-foreground">
-                We're here to help! Reach out and we'll get back to you within 24 hours.
+                We're here to help. Reach out and we'll get back to you within 24 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <Button className="rounded-full" size="lg" data-testid="button-contact">
+                <Button className="rounded-lg" size="lg" data-testid="button-contact">
                   Contact Us
                 </Button>
                 <ZoomLink href="/join">
-                  <Button variant="outline" className="rounded-full" size="lg" data-testid="button-faq-join">
-                    Join Now
+                  <Button variant="outline" className="rounded-lg" size="lg" data-testid="button-faq-join">
+                    View Membership Options
                   </Button>
                 </ZoomLink>
               </div>

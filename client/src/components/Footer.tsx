@@ -1,30 +1,23 @@
 import ZoomLink from "./ZoomLink";
-import { Heart, Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/50 border-t border-border mt-24">
+    <footer className="bg-muted/30 border-t border-border mt-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Heart className="w-5 h-5 text-primary fill-primary" />
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                FI Collective
-              </span>
-            </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Building community.<br />
-              Building wealth.<br />
-              Building freedom.
+            <span className="font-display font-bold text-xl text-foreground tracking-tight">
+              FI Collective
+            </span>
+            <p className="text-muted-foreground mt-4 leading-relaxed">
+              A community and co-working space for people pursuing financial independence.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-4 text-foreground">
-              Quick Links
+            <h4 className="font-display font-semibold text-foreground mb-4">
+              Navigate
             </h4>
             <ul className="space-y-3">
               <li>
@@ -39,15 +32,27 @@ export default function Footer() {
               </li>
               <li>
                 <ZoomLink href="/join" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-                  Join Us
+                  Membership
                 </ZoomLink>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-4 text-foreground">
-              Get in Touch
+            <h4 className="font-display font-semibold text-foreground mb-4">
+              Programs
+            </h4>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>Weekly Dinners</li>
+              <li>Speaker Series</li>
+              <li>Workshops</li>
+              <li>Community Service</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-display font-semibold text-foreground mb-4">
+              Contact
             </h4>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center gap-2">
@@ -58,9 +63,9 @@ export default function Footer() {
                 <Phone className="w-4 h-4" />
                 (555) 123-4567
               </li>
-              <li className="pt-2">
-                Main Street<br />
-                Longmont, CO 80501
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>Main Street<br />Longmont, CO 80501</span>
               </li>
             </ul>
           </div>
@@ -68,8 +73,7 @@ export default function Footer() {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 FI Collective. All rights reserved. Made with{" "}
-            <Heart className="inline w-4 h-4 text-primary fill-primary" /> in Longmont, CO
+            © 2024 FI Collective. All rights reserved.
           </p>
         </div>
       </div>
