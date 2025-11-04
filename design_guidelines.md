@@ -1,169 +1,173 @@
-# FI Collective Design Guidelines
+# FI Collective Design Guidelines - Vintage Botanical Edition
 
-## Design Approach: Sophisticated Community Hub
+## Design Approach: Modern Botanical Archive
 
-**Reference Inspiration**: Linear's precision + Stripe's credibility + Notion's approachability. Create a professional environment that inspires trust while fostering genuine connection.
+**Reference Inspiration**: Artisanal packaging design + Scientific botanical illustration + Editorial magazine layouts + Herbarium specimen cards. Create a sophisticated environment where vintage scientific precision meets contemporary community values.
 
-**Core Principle**: Every element should communicate value and credibility while maintaining human warmth. Use refined typography, strategic white space, and professional imagery to establish authority in financial independence and community building.
+**Core Principle**: Hand-crafted elegance through botanical line art, strategic illustration placement, and refined typography that honors historical scientific drawings while maintaining modern professionalism.
 
 ## Typography Hierarchy
 
-**Primary Font**: 'Inter' via Google Fonts (professional, highly readable)
-**Accent Font**: 'DM Sans' via Google Fonts for headlines (modern, clean, sophisticated)
+**Primary Font**: 'Crimson Text' via Google Fonts (elegant serif with vintage editorial feel)
+**Accent Font**: 'Space Grotesk' via Google Fonts for labels and UI elements (modern sans-serif contrast)
 
-- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight (DM Sans)
-- Section Headers: text-3xl md:text-4xl lg:text-5xl, font-bold, tracking-tight (DM Sans)
-- Subheadings: text-xl md:text-2xl, font-semibold (Inter)
-- Body Text: text-base md:text-lg, leading-relaxed (Inter)
-- Captions: text-sm, font-medium, tracking-wide uppercase for labels
-
-Maintain professionalism through tight tracking on headlines and generous leading on body text for comfortable readability.
+- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight, italic for emphasis (Crimson Text)
+- Section Headers: text-4xl md:text-5xl, font-bold (Crimson Text)
+- Subheadings: text-xl md:text-2xl, font-medium (Crimson Text)
+- Body Text: text-base md:text-lg, leading-loose (Crimson Text)
+- Labels/UI: text-sm md:text-base, font-medium, tracking-wide uppercase (Space Grotesk)
+- Captions: text-sm, italic (Crimson Text)
 
 ## Layout System
 
-**Spacing Units**: Tailwind 6, 8, 12, 16, 24, 32, 48 (e.g., p-8, gap-16, py-32)
+**Spacing Units**: Tailwind 4, 6, 8, 12, 16, 24, 32 for consistent botanical rhythm
 
 **Container Strategy**:
-- Content sections: max-w-7xl mx-auto px-6 md:px-12
-- Text-focused areas: max-w-3xl mx-auto
-- Wide layouts: max-w-[1400px] for photo grids
-- Vertical rhythm: py-24 md:py-32 for major sections
+- Content sections: max-w-7xl mx-auto px-8 md:px-16
+- Text blocks: max-w-4xl mx-auto
+- Gallery layouts: max-w-[1600px]
+- Vertical rhythm: py-20 md:py-32 lg:py-40 for major sections
 
-**Border Radius**: Professional refinement:
-- Cards/Containers: rounded-xl
-- Buttons: rounded-lg
-- Images: rounded-lg
-- Small elements: rounded-md
+**Border Styling**: Botanical specimen card aesthetic
+- Cards: rounded-sm with fine border (border-2)
+- Buttons: rounded-md
+- Images: rounded-none (scientific precision)
+- Decorative elements: delicate corner ornaments using botanical line art
 
 ## Component Library
 
 ### Hero Section
-- 90vh height with professional high-quality image: members collaborating in modern workspace setting, natural lighting, professional attire
-- Subtle dark gradient overlay (opacity-40) for text contrast
-- Centered content with max-w-4xl
-- Headline emphasizing financial independence + community value
-- Descriptive subheading highlighting key differentiators: "Weekly dinners, expert speakers, skill workshops, and community impact"
-- Two CTAs: primary "Become a Member" + secondary "Schedule a Tour" with blurred-background treatment (backdrop-blur-sm bg-white/10)
-- Small trust indicator below CTAs: "Active community of 150+ professionals"
+- 85vh height featuring full-width vintage botanical illustration overlay: detailed line drawings of olive branches, fig leaves, and lavender stems creating organic border frame
+- Central composition with specimen card aesthetic
+- Headline with italic flourish emphasizing "Financial Independence Through Community"
+- Descriptive subtitle in refined serif: "A living archive of collaboration—weekly gatherings, expert dialogues, artisanal skill-building, and collective impact"
+- Two CTAs with backdrop-blur-lg treatment: "Join Our Collection" + "Schedule Private Viewing"
+- Botanical corner ornaments framing content
+- Vintage label treatment: "Est. [YEAR] • [CITY] Collection"
 
-### Value Proposition Grid
-- Four-column layout (lg:grid-cols-4, md:grid-cols-2) with gap-8
-- Each card: minimal border, rounded-xl, p-8
-- Icon from Heroicons (24x24, outline style)
-- Bold title: "Weekly Dinners" | "Speaker Series" | "Skill Workshops" | "Community Activism"
-- Concise description emphasizing tangible benefits
-- Hover state: subtle shadow elevation
+### Value Proposition Specimen Cards
+- Four-column grid (lg:grid-cols-4, md:grid-cols-2) gap-8
+- Each card: specimen card layout with fine border-2, p-8, slight off-white background
+- Custom hand-drawn botanical icon (Heroicons as base, styled as ink drawings): olive branch, wheat stem, herb sprig, bloom
+- Latin-style label in uppercase (Space Grotesk): "CENA HEBDOMADA" (Weekly Dinners) with English subtitle
+- Delicate corner bracket ornaments
+- Detailed description in italic serif
+- Vintage catalog number: "No. 01" etc.
 
-### About/Mission Section
-- Two-column layout (lg:grid-cols-2) with gap-16, items-center
-- Left: Professional image of community event (speaker presentation or workshop in action), rounded-lg
-- Right: Mission statement with clear hierarchy
-- Key stats highlighted: "Since 20XX" | "150+ Members" | "50+ Events Annually"
-- CTA: "Our Story" link with arrow icon
+### Mission Statement Archive Page
+- Two-column layout (lg:grid-cols-5) with 3-column text, 2-column ornamental illustration
+- Left: Vintage botanical illustration (fig tree or olive grove) with scientific annotation style
+- Right: Mission text formatted as archival document
+- Hand-drawn divider lines between sections
+- Key metrics in vintage label boxes: "Since 20XX" | "150+ Specimens (Members)" | "Annual Gatherings: 50+"
+- Decorative initial capital letter for first paragraph
 
-### Program Showcase
-- Three large sections stacked vertically, alternating image/text placement
-- Section 1 (Community Events): Image right showing dinner gathering, text left describing weekly dinners + holiday parties
-- Section 2 (Learning & Growth): Image left showing speaker at podium, text right about speaker series + workshops (finance, sustainability, passion projects)
-- Section 3 (Impact): Image right showing volunteer activity, text left about community activism
-- Each section: py-24, max-w-7xl container, lg:grid-cols-2 with gap-16
-- Professional typography hierarchy, bullet points with check icons for features
+### Program Gallery - Triptych Layout
+- Three full-width sections with alternating image placements
+- Section headers with botanical illustration headers (vine borders)
+- Each section: Professional photography overlaid with delicate botanical line art borders
+- Community Events: Dinner photo with hand-drawn ivy border
+- Speaker Series: Presentation photo with laurel leaf frame
+- Community Impact: Volunteer activity with wheat stem corners
+- Text blocks formatted as specimen labels with vintage numbering
+- Decorative botanical dividers between sections (horizontal branch illustrations)
 
-### Space Features Grid
-- Three-column layout (lg:grid-cols-3) with gap-12
-- High-quality photos of amenities: focus rooms, collaboration spaces, event area, kitchen
-- Each card: Image top (aspect-video), content p-6
-- Title + description structure
-- Professional shadow on hover
+### Space Archive - Herbarium Grid
+- Masonry grid layout (three-column on desktop: lg:grid-cols-3) with varying heights
+- Space photos treated as pressed specimens: fine border-2, subtle shadow
+- Each "specimen": Photo + hand-drawn botanical accent (corner branch)
+- Latin-style labels: "FOCUS SANCTUARIUM" (Focus Rooms), "COLLABORATIO SPATIUM"
+- Vintage catalog descriptions in small italic serif
+- Pin/attachment illustration detail in corner
 
-### Membership Tiers
-- Three cards horizontal (max-w-6xl container, lg:grid-cols-3)
-- Each tier: rounded-xl, border, p-8
-- Clear tier names: "Core" | "Professional" | "Founder"
-- Pricing prominent but refined (text-4xl font-bold)
-- Feature list with Heroicons check-circle (20x20)
-- Benefits clearly listed: access hours, event inclusion, guest privileges
-- CTA per tier: rounded-lg, full-width
-- Most popular tier: subtle border accent, badge "Most Popular"
+### Membership Collection Tiers
+- Three vertical cards (lg:grid-cols-3, gap-12, max-w-6xl)
+- Each tier as vintage specimen card with ornate border treatment
+- Tier names in decorative capitals: "COLLECTOR" | "CURATOR" | "BOTANIST"
+- Pricing in large serif numerals with vintage "per annum" label
+- Feature lists with hand-drawn checkbox botanical icons (leaf checkmarks)
+- Decorative botanical illustration unique to each tier (simple herb, flowering plant, tree)
+- Featured tier: double border treatment with ribbon banner "PRAECIPUA SELECTIO"
 
-### Testimonials
-- Two-column grid (lg:grid-cols-2) with gap-12, max-w-6xl
-- Each testimonial: rounded-xl, p-8, border
-- Member photo (w-16 h-16 rounded-full) + quote
-- Name, professional title/background below
-- Focus on professional credibility and community value
+### Testimonial Herbarium
+- Two-column grid (lg:grid-cols-2, gap-16, max-w-6xl)
+- Each testimonial as pressed flower card: border-2, p-10
+- Member photo in vintage oval frame treatment (clip-path or border overlay)
+- Quote in italic serif with opening/closing botanical quotation marks (custom illustrated)
+- Attribution with hand-drawn underline flourish
+- Small botanical illustration accent per card (different herb/flower per testimonial)
 
-### FAQ Section (Separate Page)
-- Hero with "Frequently Asked Questions" headline
-- Category tabs: Membership | Space | Events | Community
-- Accordion items with gap-6, rounded-lg
-- Questions in semibold, answers in body text
-- Grouped logically with clear visual separation
-- Sidebar: Contact info, "Still have questions?" CTA
+### Events Timeline Catalog
+- Horizontal scrolling timeline with vintage catalog card treatment
+- Event cards: specimen label aesthetic, border-2, p-6
+- Date in vintage typeset style with decorative botanical date icon
+- Event type badges: illustrated labels ("Workshop Specimen" | "Dining Collection")
+- Hand-drawn connector lines between events (vine illustration)
+- "View Complete Archives" CTA with botanical arrow
 
-### Events Calendar Preview
-- Horizontal timeline or card grid showing upcoming events
-- Event cards: rounded-lg, p-6, border
-- Date/time prominent, event type label (Workshop | Dinner | Speaker)
-- Brief description + RSVP indicator
-- Link to full calendar page
+### Location Archive Entry
+- Split layout: 50% map with vintage overlay frame | 50% details as specimen card
+- Address formatted as archival location entry
+- Small gallery: Four photos in vintage frame treatments with botanical corner ornaments
+- Visiting hours in vintage label format
+- Hand-drawn compass rose decoration
+- "Schedule Specimen Viewing" CTA
 
-### Location Section
-- Split layout: 60% embedded Google Maps (rounded-lg) | 40% details
-- Address, hours, parking clearly formatted
-- Small gallery: 3-4 photos showing building exterior, neighborhood, nearby amenities
-- "Visit Us" CTA encouraging tours
+### Navigation
+- Desktop: Sticky header with delicate botanical border bottom (hand-drawn vine)
+- Logo: vintage specimen label treatment or botanical wordmark
+- Menu items in Space Grotesk uppercase with small botanical dividers
+- Right-side CTAs: "Private Tour" link + "Join Collection" button (rounded-md)
+- Subtle botanical icon accent on hover (small leaf appears)
 
-### Footer
-- Four-column layout (lg:grid-cols-4): About | Programs | Resources | Connect
-- Brief mission statement under About
-- Newsletter signup: single-line form with rounded-lg input + button
-- Social media icons (Heroicons, 24x24)
-- Secondary nav + legal links in smaller text
-- Total padding: py-16
+**Mobile**: Full overlay with botanical border frame
+- Large menu items with decorative botanical bullets
+- Vintage catalog numbering per item ("01. ABOUT" etc.)
 
-## Images
+### Footer Archive
+- Four-column layout (lg:grid-cols-4) with botanical divider lines
+- Column headers in vintage label style (uppercase Space Grotesk)
+- Newsletter: vintage subscription card aesthetic, "Join Our Mailing List - Receive Monthly Field Notes"
+- Hand-drawn botanical border separating footer sections
+- Social icons styled as vintage botanical catalog markers
+- Legal text in small italic serif with decorative end flourish
 
-**Hero Image**: Full-width professional photograph of members collaborating in the coworking space. Should show diverse professionals engaged in meaningful work/discussion, natural lighting, modern workspace aesthetic. High resolution, editorial quality.
+## Images Strategy
+
+**Primary Hero**: Full-width featuring organic botanical illustration overlay—delicate line drawings of olive branches, fig leaves, lavender creating frame. Professional photo of coworking space visible through illustration (members collaborating), creating layered vintage catalog aesthetic.
 
 **Throughout Site**:
-- Event photography: speaker presentations, workshop sessions, dinner gatherings (candid but polished)
-- Space photography: clean, well-lit shots of different areas - focus rooms, collaboration zones, event space
-- Community activism: volunteering activities showing members making impact
-- Detail shots: professional equipment, quality furniture, thoughtful design elements
-- All images: professional grade, consistent color grading, natural lighting
-- Image treatment: rounded-lg corners, subtle shadows for depth
-- Diverse representation showing inclusive professional community
+- Professional event photography with vintage botanical border overlays (hand-drawn frames)
+- Space photography: clean shots with subtle botanical corner ornaments added
+- Each major section: unique botanical illustration (herbs, leaves, flowers) as decorative element
+- Detail shots: equipment/furniture framed as specimen cards
+- Consistent vintage scientific illustration style throughout
+- All photos maintain professional quality with botanical art overlay treatment
 
-## Navigation
+## Decorative Elements
 
-**Desktop**: Sticky header (backdrop-blur-md), subtle shadow on scroll
-- Logo left (professional wordmark)
-- Center menu: About | Programs | Space | Events | FAQ
-- Right: "Schedule Tour" link + "Join" CTA button (rounded-lg)
-- Clean spacing, professional typography
-
-**Mobile**: Hamburger icon (Heroicons bars-3), full-screen overlay
-- Large touchable menu items
-- Vertical stack with py-6 spacing per item
-- Close button (x-mark icon)
+- Hand-drawn botanical corner brackets for cards
+- Delicate vine dividers between sections
+- Scientific annotation style labels (Latin names, specimen numbers)
+- Vintage rubber stamp effects for CTAs and badges
+- Decorative initial capitals for major text blocks
+- Small botanical spot illustrations (herbs, leaves) as visual rhythm breaks
+- Fine hatching/cross-hatching texture backgrounds for cards
 
 ## Interactions
 
-**Professional, Purposeful Animations**:
 - Smooth transitions (duration-300)
-- Cards subtle shadow on hover
-- Buttons scale-105 on hover
-- Accordion smooth expand
-- Scroll-triggered fade-in for sections (subtle, once)
-- No aggressive or distracting animations
+- Cards: subtle shadow lift on hover
+- Buttons: gentle scale-[1.02] with botanical icon accent appearance
+- Botanical illustrations: subtle parallax scroll (very gentle)
+- No aggressive animations—maintain vintage refinement
+- Focus states: delicate botanical border outline (ring-2)
 
 ## Accessibility
 
-- AA contrast throughout
-- Descriptive alt text for all images
-- Form labels visible and clear
-- Focus states: visible outline (ring-2) matching brand
-- Semantic HTML with proper heading hierarchy
-- Minimum 44x44px touch targets
-- Skip to main content link
+- High contrast text on backgrounds (AA minimum)
+- Descriptive alt text emphasizing botanical aesthetic
+- Visible form labels in vintage label style
+- Semantic HTML with proper hierarchy
+- 44x44px minimum touch targets
+- Skip navigation link styled as vintage catalog tab

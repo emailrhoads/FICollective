@@ -30,43 +30,50 @@ export default function Join() {
       <Navigation />
       <PageTransition location={location}>
         <main className="flex-1">
-          <div className="py-20 px-6 text-center bg-gradient-to-b from-muted/30 to-transparent">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg mb-6">
+          <div className="py-20 px-8 text-center bg-gradient-to-b from-muted/30 to-transparent border-b-2 border-border relative">
+            {/* Decorative elements */}
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-primary/20 text-4xl">✿</div>
+            
+            <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-primary/30 rounded-sm mb-6 bg-card">
               <UserPlus className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6 tracking-tight">
-              Become a Member
+            <div className="font-mono text-xs tracking-wider text-primary uppercase mb-4">
+              NOVUM MEMBRUM
+            </div>
+            <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6 italic">
+              Join Our Collection
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join a community of professionals pursuing financial independence through smart planning and mutual support
+            <p className="font-display text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
+              Become a specimen in our archive of professionals pursuing financial independence through strategic planning and mutual support
             </p>
           </div>
 
           <MembershipTiers />
 
-          <section className="py-24 px-6">
+          <section className="py-24 px-8">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 tracking-tight">
-                  Get in Touch
+                <div className="text-primary/30 text-3xl mb-4">❖</div>
+                <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 italic">
+                  Initiate Contact
                 </h2>
-                <p className="text-lg text-muted-foreground">
-                  Ready to join? Have questions? Fill out the form and we'll get back to you soon.
+                <p className="font-display text-lg text-muted-foreground italic">
+                  Prepared to join? Harboring inquiries? Complete the registry below and expect our correspondence.
                 </p>
               </div>
 
-              <Card className="p-8 md:p-10 rounded-lg shadow-lg">
+              <Card className="p-8 md:p-10 rounded-sm shadow-lg border-2">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-base font-semibold">
-                      Name
+                    <Label htmlFor="name" className="font-mono text-xs tracking-wider uppercase">
+                      Full Name
                     </Label>
                     <Input
                       id="name"
                       type="text"
                       required
-                      className="rounded-lg h-11"
-                      placeholder="Your full name"
+                      className="rounded-sm h-11 border-2 font-display"
+                      placeholder="Your complete designation"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       data-testid="input-name"
@@ -74,15 +81,15 @@ export default function Join() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-base font-semibold">
-                      Email
+                    <Label htmlFor="email" className="font-mono text-xs tracking-wider uppercase">
+                      Electronic Post
                     </Label>
                     <Input
                       id="email"
                       type="email"
                       required
-                      className="rounded-lg h-11"
-                      placeholder="your.email@example.com"
+                      className="rounded-sm h-11 border-2 font-display"
+                      placeholder="your.correspondence@domain.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       data-testid="input-email"
@@ -90,13 +97,13 @@ export default function Join() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-base font-semibold">
-                      Phone (Optional)
+                    <Label htmlFor="phone" className="font-mono text-xs tracking-wider uppercase">
+                      Telephone (Optional)
                     </Label>
                     <Input
                       id="phone"
                       type="tel"
-                      className="rounded-lg h-11"
+                      className="rounded-sm h-11 border-2 font-display"
                       placeholder="(555) 123-4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -105,13 +112,13 @@ export default function Join() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-base font-semibold">
-                      Tell Us About Yourself
+                    <Label htmlFor="message" className="font-mono text-xs tracking-wider uppercase">
+                      Personal Statement
                     </Label>
                     <Textarea
                       id="message"
-                      className="rounded-lg min-h-32 resize-none"
-                      placeholder="What brings you to FI Collective? Where are you on your FI journey?"
+                      className="rounded-sm min-h-32 resize-none border-2 font-display"
+                      placeholder="What compels your interest in FI Collective? Where do you find yourself on the FI journey?"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       data-testid="input-message"
@@ -120,11 +127,12 @@ export default function Join() {
 
                   <Button 
                     type="submit" 
-                    className="w-full rounded-lg h-11 text-base" 
+                    className="w-full rounded-sm h-11 uppercase text-xs tracking-wide border-2" 
                     size="lg"
                     data-testid="button-submit-contact"
+                    style={{ fontFamily: 'Space Grotesk, sans-serif' }}
                   >
-                    Send Message
+                    Submit Correspondence
                   </Button>
                 </form>
               </Card>

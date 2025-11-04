@@ -3,23 +3,26 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border mt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+    <footer className="bg-muted/30 border-t-2 border-border mt-24">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <span className="font-display font-bold text-xl text-foreground tracking-tight">
-              FI Collective
-            </span>
-            <p className="text-muted-foreground mt-4 leading-relaxed">
-              A community and co-working space for people pursuing financial independence.
+            <div className="flex items-baseline gap-2 mb-4">
+              <span className="font-display font-bold text-xl text-foreground italic">
+                FI Collective
+              </span>
+              <span className="font-mono text-xs text-muted-foreground">EST. 2024</span>
+            </div>
+            <p className="font-display text-muted-foreground leading-relaxed italic">
+              A curated community and workspace for those pursuing financial independence.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">
+            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
               Navigate
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 font-display">
               <li>
                 <ZoomLink href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Home
@@ -39,10 +42,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">
+            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
               Programs
             </h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3 font-display text-muted-foreground italic">
               <li>Weekly Dinners</li>
               <li>Speaker Series</li>
               <li>Workshops</li>
@@ -51,10 +54,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-foreground mb-4">
+            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
               Contact
             </h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3 font-display text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 hello@ficollective.com
@@ -65,15 +68,15 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>FI Collective HQ<br />Main Street<br />Longmont, CO 80501</span>
+                <span className="italic">FI Collective HQ<br />Main Street<br />Longmont, CO 80501</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2024 FI Collective. All rights reserved.
+        <div className="border-t-2 border-border pt-8 text-center">
+          <p className="font-display text-sm text-muted-foreground italic">
+            © 2024 FI Collective. All rights reserved. Archivum perpetuum.
           </p>
         </div>
       </div>
