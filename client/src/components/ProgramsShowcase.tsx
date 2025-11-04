@@ -1,5 +1,13 @@
 import { Card } from "@/components/ui/card";
-import { Calendar, Users, BookOpen, Heart, Presentation, Lightbulb, MessageSquare } from "lucide-react";
+import {
+  Calendar,
+  Users,
+  BookOpen,
+  Heart,
+  Presentation,
+  Lightbulb,
+  MessageSquare,
+} from "lucide-react";
 import communityImage from "@assets/generated_images/Minimalist_table_setting_line_drawing_2e1f611d.png";
 import moneyPlantIcon from "@assets/generated_images/Money_plant_illustration_6a80ce05.png";
 import bookIcon from "@assets/generated_images/Book_learning_illustration_454db821.png";
@@ -11,12 +19,16 @@ export default function ProgramsShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* Header with decorative elements */}
         <div className="text-center mb-20 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">❦</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">
+            ❦
+          </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4 italic">
             Tending Our Garden Together
           </h2>
           <p className="font-display text-lg text-muted-foreground max-w-2xl mx-auto italic">
-            Spring plantings of knowledge. Summer growth of relationships. Autumn harvests of wisdom. Winter rest and reflection. Growing and sharing amongst friends.
+            Spring plantings of knowledge. Summer growth of relationships.
+            Autumn harvests of wisdom. Winter rest and reflection. Growing and
+            sharing amongst friends.
           </p>
           <div className="mt-6 w-32 h-px bg-border mx-auto"></div>
         </div>
@@ -25,14 +37,18 @@ export default function ProgramsShowcase() {
           {/* Community Events */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="border-2 border-border rounded-sm overflow-hidden relative">
-              <img 
-                src={communityImage} 
-                alt="Community members gathering for dinner" 
+              <img
+                src={communityImage}
+                alt="Community members gathering for dinner"
                 className="w-full"
               />
               {/* Corner ornaments */}
-              <div className="absolute top-2 left-2 text-card text-2xl drop-shadow-md font-serif">❦</div>
-              <div className="absolute top-2 right-2 text-card text-2xl drop-shadow-md font-serif">❦</div>
+              <div className="absolute top-2 left-2 text-card text-2xl drop-shadow-md font-serif">
+                ❦
+              </div>
+              <div className="absolute top-2 right-2 text-card text-2xl drop-shadow-md font-serif">
+                ❦
+              </div>
             </div>
             <div className="space-y-8">
               <div>
@@ -43,7 +59,8 @@ export default function ProgramsShowcase() {
                   Partaking in the Harvest
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  The best fruits taste sweeter amongst those who help you grow. Weekly dinners and celebrations where we partake together.
+                  The best fruits taste sweeter amongst those who help you grow.
+                  Weekly dinners and celebrations where we partake together.
                 </p>
               </div>
 
@@ -52,9 +69,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Users className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Tuesday Harvest Dinners</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Tuesday Harvest Dinners
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Weekly potluck gatherings where we partake in food, stories, and strategies amongst friends. Growing together, eating together, planning together.
+                        Weekly potluck gatherings where we partake in food,
+                        stories, and strategies amongst friends. Growing
+                        together, eating together, planning together.
                       </p>
                     </div>
                   </div>
@@ -64,9 +85,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Calendar className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Seasonal Celebrations</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Seasonal Celebrations
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Mark the seasons together—spring plantings, summer growth, autumn harvests, winter planning. These celebrations make our garden feel like home.
+                        Mark the seasons together—spring plantings, summer
+                        growth, autumn harvests, winter planning. These
+                        celebrations make our garden feel like home.
                       </p>
                     </div>
                   </div>
@@ -76,9 +101,14 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <MessageSquare className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Garden Commons Chat</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Garden Commons Chat
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Online gathering space where seeds of ideas are planted spontaneously. Share cultivation discoveries, ask fellow gardeners questions, and watch insights sprout in real-time conversation.
+                        Online gathering space where seeds of ideas are planted
+                        spontaneously. Share cultivation discoveries, ask fellow
+                        gardeners questions, and watch insights sprout in
+                        real-time conversation.
                       </p>
                     </div>
                   </div>
@@ -97,7 +127,11 @@ export default function ProgramsShowcase() {
           {/* Learning & Growth */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="lg:order-1 border-2 border-border rounded-sm p-12 bg-muted/20 flex items-center justify-center min-h-[400px]">
-              <img src={bookIcon} alt="Book and learning" className="w-48 h-48 opacity-60" />
+              <img
+                src={moneyPlantIcon}
+                alt="Book and learning"
+                className="w-48 h-48 opacity-60"
+              />
             </div>
             <div className="space-y-8 lg:order-2">
               <div>
@@ -108,7 +142,8 @@ export default function ProgramsShowcase() {
                   Tending & Growing
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  Learn from master gardeners, share cultivation techniques, and tend your garden with expert guidance and peer wisdom.
+                  Learn from master gardeners, share cultivation techniques, and
+                  tend your garden with expert guidance and peer wisdom.
                 </p>
               </div>
 
@@ -117,9 +152,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Presentation className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Master Gardener Series</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Master Gardener Series
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Monthly talks from experienced cultivators on growing wealth, sustainable living, real estate harvests, and passion-driven work.
+                        Monthly talks from experienced cultivators on growing
+                        wealth, sustainable living, real estate harvests, and
+                        passion-driven work.
                       </p>
                     </div>
                   </div>
@@ -129,9 +168,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Cultivation Workshops</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Cultivation Workshops
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Hands-on sessions: planting investment seeds, tax-efficient pruning, index fund composting, entrepreneurial propagation.
+                        Hands-on sessions: planting investment seeds,
+                        tax-efficient pruning, index fund composting,
+                        entrepreneurial propagation.
                       </p>
                     </div>
                   </div>
@@ -141,9 +184,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <BookOpen className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Garden Library Circles</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Garden Library Circles
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Monthly book discussions on financial wisdom, sustainable growth, and cultivating meaningful work. Seeds of knowledge shared.
+                        Monthly book discussions on financial wisdom,
+                        sustainable growth, and cultivating meaningful work.
+                        Seeds of knowledge shared.
                       </p>
                     </div>
                   </div>
@@ -162,7 +209,11 @@ export default function ProgramsShowcase() {
           {/* Community Impact */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="border-2 border-border rounded-sm p-12 bg-muted/20 flex items-center justify-center min-h-[400px]">
-              <img src={handsIcon} alt="Community helping hands" className="w-48 h-48 opacity-60" />
+              <img
+                src={handsIcon}
+                alt="Community helping hands"
+                className="w-48 h-48 opacity-60"
+              />
             </div>
             <div className="space-y-8">
               <div>
@@ -173,7 +224,9 @@ export default function ProgramsShowcase() {
                   Giving Back
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  A well-tended garden produces more than one household needs. We give back to the broader community through service, teaching neighbors to plant their own seeds.
+                  A well-tended garden produces more than one household needs.
+                  We give back to the broader community through service,
+                  teaching neighbors to plant their own seeds.
                 </p>
               </div>
 
@@ -182,9 +235,13 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Quarterly Community Harvest</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">
+                        Quarterly Community Harvest
+                      </h4>
                       <p className="font-display text-muted-foreground italic">
-                        Volunteer together: food security gardens, environmental planting, financial literacy seeds for neighbors. What we've grown, we give back to help others grow.
+                        Volunteer together: food security gardens, environmental
+                        planting, financial literacy seeds for neighbors. What
+                        we've grown, we give back to help others grow.
                       </p>
                     </div>
                   </div>
@@ -192,9 +249,12 @@ export default function ProgramsShowcase() {
 
                 <Card className="p-6 bg-muted/50 border-2 rounded-sm">
                   <p className="font-display text-foreground italic leading-relaxed">
-                    "True wealth means partaking in the harvest alongside others, and teaching those still learning to plant."
+                    "True wealth means partaking in the harvest alongside
+                    others, and teaching those still learning to plant."
                   </p>
-                  <p className="font-display text-sm text-muted-foreground mt-2">— Garden Wisdom, FI Collective</p>
+                  <p className="font-display text-sm text-muted-foreground mt-2">
+                    — Garden Wisdom, FI Collective
+                  </p>
                 </Card>
               </div>
             </div>
