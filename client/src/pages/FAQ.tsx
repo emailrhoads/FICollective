@@ -17,7 +17,7 @@ export default function FAQ() {
         <main className="flex-1">
           <div className="py-20 px-8 text-center bg-gradient-to-b from-muted/30 to-transparent border-b-2 border-border relative">
             {/* Decorative elements */}
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-primary/20 text-4xl">✿</div>
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-primary/20 text-4xl font-serif">❦</div>
             
             <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-primary/30 rounded-sm mb-6 bg-card">
               <HelpCircle className="w-8 h-8 text-primary" />
@@ -37,12 +37,12 @@ export default function FAQ() {
 
           <div className="py-24 px-8 bg-muted/30 border-t-2 border-border">
             <div className="max-w-2xl mx-auto text-center space-y-6">
-              <div className="text-primary/30 text-3xl mb-4">❖</div>
+              <div className="text-primary/30 text-3xl mb-4 font-serif">✺</div>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground italic">
-                Further Inquiries?
+                More Questions About Our Garden?
               </h2>
               <p className="font-display text-lg text-muted-foreground italic">
-                We remain at your service. Contact us and expect response within 24 hours.
+                We're here to help you understand if our community is the right place for your financial growth. Reach out—we respond within 24 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Button className="rounded-sm uppercase text-xs tracking-wide border-2" size="lg" data-testid="button-contact" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>

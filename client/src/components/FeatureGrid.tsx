@@ -12,31 +12,31 @@ interface Feature {
 const features: Feature[] = [
   {
     icon: Wifi,
-    title: "Premium Workspace",
-    latin: "SPATIUM LABORIS",
+    title: "Fertile Soil",
+    latin: "TERRA FERTILIS",
     number: "No. 01",
-    description: "High-speed connectivity, quiet focus sanctuaries, collaboration chambers, and meeting rooms curated for concentrated productivity."
+    description: "High-speed connectivity, quiet focus sanctuaries, collaboration chambers—the rich foundation where your financial garden takes root and thrives."
   },
   {
     icon: Coffee,
-    title: "Daily Provisions",
-    latin: "QUOTIDIANA CIBARIA",
+    title: "Daily Nourishment",
+    latin: "NUTRIMENTUM",
     number: "No. 02",
-    description: "Unlimited coffee, tea, and provisions. Fully equipped preparation space for communal use. Comfortable gathering areas."
+    description: "Unlimited coffee, tea, and provisions. Fuel your body while tending to your financial growth. Community kitchen for shared meals."
   },
   {
     icon: Users,
-    title: "Active Community",
-    latin: "COMMUNITAS ACTIVA",
+    title: "Growing Together",
+    latin: "CRESCERE SIMUL",
     number: "No. 03",
-    description: "150+ specimens (members) pursuing FI through diverse paths—entrepreneurial spirits, working professionals, early retirees, and transitional journeys."
+    description: "150+ gardeners cultivating FI through diverse paths—entrepreneurs, working professionals, early retirees. We share knowledge, celebrate harvests, weather seasons together."
   },
   {
     icon: Clock,
-    title: "Flexible Access",
-    latin: "ACCESSUS FLEXIBILIS",
+    title: "All Seasons",
+    latin: "OMNES TEMPORA",
     number: "No. 04",
-    description: "Extended operating hours and round-the-clock access options. Work when it suits your schedule and lifestyle requirements."
+    description: "Extended hours and 24/7 access options. Tend your garden on your schedule—early morning seedlings or midnight planning sessions."
   }
 ];
 
@@ -54,7 +54,7 @@ export default function FeatureGrid() {
                 data-testid={`card-feature-${index}`}
               >
                 {/* Corner ornament */}
-                <div className="absolute top-2 right-2 text-primary/20 text-lg">✿</div>
+                <div className="absolute top-2 right-2 text-primary/20 text-lg font-serif">❦</div>
                 
                 <div className="space-y-6">
                   <div className="flex items-start justify-between">

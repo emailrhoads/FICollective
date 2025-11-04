@@ -6,7 +6,7 @@ export default function LocationMap() {
     <section className="py-20 md:py-32 px-8 md:px-16 border-t-2 border-border">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl">✿</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">❦</div>
           <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
             LOCUS NOSTER
           </div>

@@ -11,12 +11,12 @@ export default function ProgramsShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* Header with decorative elements */}
         <div className="text-center mb-20 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl">✿</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">❦</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4 italic">
-            Beyond the Workspace
+            Tending Our Garden Together
           </h2>
           <p className="font-display text-lg text-muted-foreground max-w-2xl mx-auto italic">
-            Cultivating a community around financial independence, continuous learning, and collective impact.
+            Growing wealth, sharing knowledge, harvesting wisdom, and feasting on abundance with friends.
           </p>
           <div className="mt-6 w-32 h-px bg-border mx-auto"></div>
         </div>
@@ -31,19 +31,19 @@ export default function ProgramsShowcase() {
                 className="w-full"
               />
               {/* Corner ornaments */}
-              <div className="absolute top-2 left-2 text-card text-2xl drop-shadow-md">✿</div>
-              <div className="absolute top-2 right-2 text-card text-2xl drop-shadow-md">✿</div>
+              <div className="absolute top-2 left-2 text-card text-2xl drop-shadow-md font-serif">❦</div>
+              <div className="absolute top-2 right-2 text-card text-2xl drop-shadow-md font-serif">❦</div>
             </div>
             <div className="space-y-8">
               <div>
                 <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
-                  COLLECTIO I • COMMUNITAS
+                  GARDEN I • COMMUNITY
                 </div>
                 <h3 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 italic">
-                  Community & Connection
+                  Sharing the Harvest
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  Cultivate genuine relationships with fellow travelers on the path to financial independence.
+                  The best fruits taste sweeter when shared with friends. Weekly dinners and celebrations where we feast together on the abundance we've grown.
                 </p>
               </div>
 
@@ -52,9 +52,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Users className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Weekly Community Dinners</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Thursday Harvest Dinners</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Thursday evenings: potluck gatherings where members share meals, exchange FI strategies, and forge lasting bonds.
+                        Weekly potluck feasts where we share food, stories, and strategies. Not greedy consumption—grateful abundance shared among friends.
                       </p>
                     </div>
                   </div>
@@ -64,9 +64,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Calendar className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Holiday Celebrations</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Seasonal Celebrations</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Annual festivities, summer gatherings, and seasonal celebrations that transform FI Collective into home.
+                        Mark the seasons together—spring plantings, summer growth, autumn harvests, winter planning. These celebrations make our garden feel like home.
                       </p>
                     </div>
                   </div>
@@ -78,7 +78,7 @@ export default function ProgramsShowcase() {
           {/* Decorative divider */}
           <div className="flex items-center justify-center gap-4">
             <div className="w-16 h-px bg-border"></div>
-            <div className="text-primary/30 text-2xl">❖</div>
+            <div className="text-primary/30 text-2xl font-serif">✺</div>
             <div className="w-16 h-px bg-border"></div>
           </div>
 
@@ -87,13 +87,13 @@ export default function ProgramsShowcase() {
             <div className="space-y-8 lg:order-2">
               <div>
                 <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
-                  COLLECTIO II • ERUDITIO
+                  GARDEN II • CULTIVATION
                 </div>
                 <h3 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 italic">
-                  Learning & Growth
+                  Tending & Growing
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  Expand knowledge through expert speakers, hands-on workshops, and collaborative learning.
+                  Learn from master gardeners, share cultivation techniques, and tend your financial garden with expert guidance and peer wisdom.
                 </p>
               </div>
 
@@ -102,9 +102,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Presentation className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Monthly Speaker Series</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Master Gardener Series</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Distinguished guests on personal finance, real estate, sustainable living, and passion-driven ventures.
+                        Monthly talks from experienced cultivators on growing wealth, sustainable living, real estate harvests, and passion-driven work.
                       </p>
                     </div>
                   </div>
@@ -114,9 +114,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Lightbulb className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Skill-Building Workshops</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Cultivation Workshops</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Practical instruction: tax optimization, index fund investing, entrepreneurial ventures, budgeting systems.
+                        Hands-on sessions: planting investment seeds, tax-efficient pruning, index fund composting, entrepreneurial propagation.
                       </p>
                     </div>
                   </div>
@@ -126,9 +126,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <BookOpen className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Book Clubs & Discussion</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Garden Library Circles</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Monthly literary discussions on FI classics, sustainability, and personal development.
+                        Monthly book discussions on financial wisdom, sustainable growth, and cultivating meaningful work. Seeds of knowledge shared.
                       </p>
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function ProgramsShowcase() {
           {/* Decorative divider */}
           <div className="flex items-center justify-center gap-4">
             <div className="w-16 h-px bg-border"></div>
-            <div className="text-primary/30 text-2xl">❖</div>
+            <div className="text-primary/30 text-2xl font-serif">✺</div>
             <div className="w-16 h-px bg-border"></div>
           </div>
 
@@ -155,13 +155,13 @@ export default function ProgramsShowcase() {
             <div className="space-y-8">
               <div>
                 <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
-                  COLLECTIO III • IMPACTUS
+                  GARDEN III • GIVING BACK
                 </div>
                 <h3 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 italic">
-                  Making an Impact
+                  Sharing Our Bounty
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  Financial independence grants freedom. We channel that freedom toward meaningful community action.
+                  A well-tended garden produces more than one household needs. We share our harvest with the broader community through service and giving back.
                 </p>
               </div>
 
@@ -170,9 +170,9 @@ export default function ProgramsShowcase() {
                   <div className="flex items-start gap-4">
                     <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-display font-semibold text-foreground mb-2">Community Activism & Service</h4>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Quarterly Community Harvest</h4>
                       <p className="font-display text-muted-foreground italic">
-                        Quarterly volunteer initiatives: food security support, environmental stewardship, financial literacy programs for underserved communities.
+                        Volunteer together: food security gardens, environmental planting, financial literacy seeds for neighbors. Abundance shared, not hoarded.
                       </p>
                     </div>
                   </div>
@@ -180,9 +180,9 @@ export default function ProgramsShowcase() {
 
                 <Card className="p-6 bg-muted/50 border-2 rounded-sm">
                   <p className="font-display text-foreground italic leading-relaxed">
-                    "Financial independence transcends early retirement—it's about employing freedom to create positive change. This is our practice."
+                    "A thriving financial garden produces more than you can consume alone. True wealth means sharing the harvest with those who helped you grow, and those still learning to plant."
                   </p>
-                  <p className="font-display text-sm text-muted-foreground mt-2">— Collected Wisdom, Member Archive</p>
+                  <p className="font-display text-sm text-muted-foreground mt-2">— Garden Wisdom, FI Collective</p>
                 </Card>
               </div>
             </div>

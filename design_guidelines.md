@@ -1,10 +1,12 @@
-# FI Collective Design Guidelines - Vintage Botanical Edition
+# FI Collective Design Guidelines - Garden Cultivation Edition
 
-## Design Approach: Modern Botanical Archive
+## Design Approach: Financial Garden Cultivation
 
-**Reference Inspiration**: Artisanal packaging design + Scientific botanical illustration + Editorial magazine layouts + Herbarium specimen cards. Create a sophisticated environment where vintage scientific precision meets contemporary community values.
+**Reference Inspiration**: Vintage seed catalogs + Scientific botanical illustration + Garden planning journals + Herbarium specimen cards. Create a nurturing environment where the metaphor of cultivating a financial garden meets community harvest sharing.
 
-**Core Principle**: Hand-crafted elegance through botanical line art, strategic illustration placement, and refined typography that honors historical scientific drawings while maintaining modern professionalism.
+**Core Principle**: Hand-crafted elegance through botanical line art emphasizing GROWTH, CULTIVATION, and SHARED HARVEST. The visual language celebrates growing your financial garden, tending it with care, and feasting on the fruits of your labor with friends—not greed, but grateful abundance shared in community.
+
+**Color Philosophy**: Sage greens, mint, and light greens represent growth and cultivation. Warm harvest golds accent the bounty. Earthy tones ground the experience. This palette evokes seedlings, thriving gardens, and autumn harvest—natural, grounded, and nurturing without being effeminate.
 
 ## Typography Hierarchy
 

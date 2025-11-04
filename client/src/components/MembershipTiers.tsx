@@ -67,7 +67,7 @@ export default function MembershipTiers() {
     <section className="py-20 md:py-32 px-8 md:px-16 bg-muted/30 border-y-2 border-border">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl">✿</div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 text-primary/20 text-4xl font-serif">❦</div>
           <div className="font-mono text-xs tracking-wider text-primary uppercase mb-2">
             TRES GRADUS
           </div>
@@ -87,7 +87,7 @@ export default function MembershipTiers() {
               data-testid={`card-tier-${tier.name.toLowerCase().replace(' ', '-')}`}
             >
               {/* Corner ornament */}
-              <div className="absolute top-2 right-2 text-primary/20 text-lg">✿</div>
+              <div className="absolute top-2 right-2 text-primary/20 text-lg font-serif">❦</div>
               
               {tier.popular && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-sm px-3 py-1 border-2 uppercase text-xs tracking-wide" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>

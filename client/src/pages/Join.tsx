@@ -32,7 +32,7 @@ export default function Join() {
         <main className="flex-1">
           <div className="py-20 px-8 text-center bg-gradient-to-b from-muted/30 to-transparent border-b-2 border-border relative">
             {/* Decorative elements */}
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-primary/20 text-4xl">✿</div>
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-primary/20 text-4xl font-serif">❦</div>
             
             <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-primary/30 rounded-sm mb-6 bg-card">
               <UserPlus className="w-8 h-8 text-primary" />
@@ -41,10 +41,10 @@ export default function Join() {
               NOVUM MEMBRUM
             </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl text-foreground mb-6 italic">
-              Join Our Collection
+              Plant Your Roots Here
             </h1>
             <p className="font-display text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto italic">
-              Become a specimen in our archive of professionals pursuing financial independence through strategic planning and mutual support
+              Join fellow gardeners cultivating financial independence. Plant seeds, share knowledge, celebrate harvests together.
             </p>
           </div>
 
@@ -53,12 +53,12 @@ export default function Join() {
           <section className="py-24 px-8">
             <div className="max-w-2xl mx-auto">
               <div className="text-center mb-12">
-                <div className="text-primary/30 text-3xl mb-4">❖</div>
+                <div className="text-primary/30 text-3xl mb-4 font-serif">✺</div>
                 <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-4 italic">
-                  Initiate Contact
+                  Let's Connect
                 </h2>
                 <p className="font-display text-lg text-muted-foreground italic">
-                  Prepared to join? Harboring inquiries? Complete the registry below and expect our correspondence.
+                  Ready to grow with us? Have questions about tending your financial garden? Reach out—we'll respond with care.
                 </p>
               </div>
 

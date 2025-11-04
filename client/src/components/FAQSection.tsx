@@ -66,7 +66,7 @@ export default function FAQSection() {
               data-testid={`accordion-faq-${index}`}
             >
               {/* Decorative corner */}
-              <div className="absolute top-2 right-2 text-primary/10 text-sm">✿</div>
+              <div className="absolute top-2 right-2 text-primary/10 text-sm font-serif">❦</div>
               
               <AccordionTrigger className="font-display text-base md:text-lg text-left hover:no-underline py-6 font-semibold">
                 <span className="font-mono text-xs text-primary mr-3">Q{String(index + 1).padStart(2, '0')}.</span>
