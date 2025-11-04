@@ -12,44 +12,44 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "What constitutes FI Collective?",
-    answer: "FI Collective represents a curated community and workspace for individuals pursuing Financial Independence. We furnish professional chambers, networking opportunities, and educational programming centered on achieving financial freedom through strategic investing, intentional living, and community support."
+    question: "What is FI Collective?",
+    answer: "FI Collective is a community garden where you cultivate financial independence. We provide the fertile soil (workspace), the tools (education), fellow gardeners (community), and shared harvests (dinners and events). Think of it as tending your financial garden amongst friends who are growing their own."
   },
   {
     question: "What does 'FI' signify?",
-    answer: "FI denotes Financial Independence—the capacity to exist without dependence upon employment income. It concerns building passive revenue streams, strategic investing, and intentional living to achieve liberation from traditional employment constraints. Some pursue early retirement (FIRE), whilst others seek increased flexibility and life choices."
+    answer: "FI means Financial Independence—planting enough investment seeds that their growth eventually sustains you without traditional employment. Some harvest early (FIRE - early retirement), others tend their garden while working, and some simply enjoy the peace of knowing their garden is thriving and productive."
+  },
+  {
+    question: "What's your investment philosophy?",
+    answer: "To vanguard the fidelity of our garden, we have a strict aversion to percentage-based investment advisors—they're like taking a percentage of your harvest every year, forever. We believe in flat-fee advisors and low-cost index fund ETFs. Let your money grow without someone else's hands constantly in your basket. Plant it, let it grow, keep what you've cultivated."
+  },
+  {
+    question: "Do people actually work in the co-working space?",
+    answer: "As little as possible! The space isn't buzzing with daily workers—it's more like a quiet greenhouse for seasonal preparation. Members come for Tuesday dinners, monthly events, workshops, and the occasional focused work session. Think of it as your quiet place to prepare seasonal efforts, not a bustling daily office."
   },
   {
     question: "What programs and gatherings do you offer?",
-    answer: "We host weekly community dinners each Thursday, a monthly speaker series addressing personal finance, sustainability, and passion projects, skill-building workshops (investing, tax optimization, entrepreneurial ventures), book clubs, holiday celebrations, and quarterly volunteer initiatives. All programs are included with membership."
+    answer: "Spring brings new workshops (planting investment seeds). Summer grows our speaker series and book clubs. Autumn delivers our Tuesday harvest dinners and celebrations. Winter offers reflection and planning sessions. Plus quarterly volunteering where we help others start their own gardens. All seasons, all programs included with membership."
   },
   {
     question: "What is the membership investment?",
-    answer: "We offer three tiers: Part-Time ($99/monthly) for 10 days access, Full-Time ($199/monthly) for unlimited access, and Dedicated Desk ($299/monthly) with your assigned workspace. All memberships include connectivity, refreshments, and access to all community programs. Day passes are available for $25."
+    answer: "We offer three tiers: Part-Time ($XX/monthly) for 10 days access, Full-Time ($YY/monthly) for unlimited access, and Dedicated Desk ($ZZZ/monthly) with your assigned workspace. All memberships include connectivity, refreshments, and access to all community programs and Tuesday dinners. Day passes available for those testing the soil."
   },
   {
     question: "Must I be pursuing FIRE to join?",
-    answer: "Not at all! Whilst FI Collective is designed for those interested in Financial Independence, we welcome anyone who values intentional financial planning, entrepreneurship, and community. Whether you're commencing your FI journey, operating a business, or already financially independent, you'll discover your people here."
+    answer: "Not at all! Whether you're just planting your first seeds, actively tending an established garden, or already harvesting from years of growth—you're welcome here. We're gardeners at different seasons of our journeys, learning from each other and partaking in what we've grown together."
   },
   {
-    question: "What amenities are included?",
-    answer: "All members enjoy high-speed connectivity, unlimited coffee and tea, meeting chambers, quiet focus sanctuaries, event space, printing facilities, and lockers. Full-Time and Dedicated Desk members also receive round-the-clock access and priority booking for meeting chambers."
-  },
-  {
-    question: "Tell me more about the weekly dinners.",
-    answer: "Each Thursday evening, members gather for a potluck-style dinner. It's a casual opportunity to connect with others on the FI path, share strategies, troubleshoot challenges, and build genuine friendships. These dinners often lead to mastermind groups, accountability partnerships, and lasting community bonds."
+    question: "Tell me more about the Tuesday dinners.",
+    answer: "Every Tuesday evening, we gather for potluck harvest dinners. Bring what you've made, partake in what others have brought, share cultivation strategies, and build genuine friendships. These aren't networking events—they're family dinners amongst people who understand the journey. Many lasting partnerships and friendships grow from these weekly gatherings."
   },
   {
     question: "What topics do your speakers address?",
-    answer: "Our monthly speaker series features experts on personal finance (index investing, real estate, tax strategies), sustainability (minimalism, renewable energy, eco-friendly living), and passion projects (turning hobbies into income, building location-independent businesses). We also host member-led talks where people share their FI journey and lessons learned."
-  },
-  {
-    question: "What kind of volunteering does the community undertake?",
-    answer: "We organize quarterly volunteer days focused on community impact: food security support, environmental stewardship projects, and financial literacy workshops for underserved communities. FI grants us freedom—we channel that freedom into making a positive local difference."
+    answer: "Our master gardeners (speakers) share wisdom on cultivating wealth: index fund composting, real estate harvests, tax-efficient pruning, sustainable living, and turning passions into perennial income. We also hear from members about their own gardens—what they've planted, what's thrived, what they'd prune differently."
   },
   {
     question: "Can I trial before joining?",
-    answer: "Absolutely! We offer day passes for $25 with full access to the space. We also host complimentary community events monthly that are open to the public—an excellent way to meet members, see the space, and experience our community atmosphere before committing."
+    answer: "Absolutely! Come test the soil with a day pass. We also host monthly open events where you can meet fellow gardeners, see the space, and understand if our garden is the right place for your seeds to grow. No commitment required—just curiosity and interest in cultivating financial independence."
   }
 ];
 

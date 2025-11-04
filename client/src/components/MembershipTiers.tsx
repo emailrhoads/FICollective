@@ -15,7 +15,7 @@ const tiers: Tier[] = [
   {
     name: "Part-Time",
     latin: "COLLECTOR",
-    price: "$99",
+    price: "$XX",
     features: [
       "10 days per month",
       "High-speed connectivity",
@@ -28,7 +28,7 @@ const tiers: Tier[] = [
   {
     name: "Full-Time",
     latin: "CURATOR",
-    price: "$199",
+    price: "$YY",
     popular: true,
     features: [
       "Unlimited access",
@@ -43,7 +43,7 @@ const tiers: Tier[] = [
   {
     name: "Dedicated Desk",
     latin: "BOTANIST",
-    price: "$299",
+    price: "$ZZZ",
     features: [
       "Personal workspace",
       "Unlimited access",
