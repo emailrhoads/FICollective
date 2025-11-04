@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import ZoomLink from "./ZoomLink";
 
 export default function Hero() {
   return (
@@ -45,16 +45,16 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Link href="/join">
+          <ZoomLink href="/join">
             <Button size="lg" className="font-mono text-base" data-testid="button-hero-join">
               [ JOIN NOW ]
             </Button>
-          </Link>
-          <Link href="/faq">
+          </ZoomLink>
+          <ZoomLink href="/faq">
             <Button variant="outline" size="lg" className="font-mono text-base" data-testid="button-hero-learn">
               [ LEARN MORE ]
             </Button>
-          </Link>
+          </ZoomLink>
         </div>
 
         <div className="pt-8">

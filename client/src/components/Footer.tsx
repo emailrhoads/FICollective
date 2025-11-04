@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import ZoomLink from "./ZoomLink";
 
 export default function Footer() {
   return (
@@ -27,19 +27,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 font-mono text-sm">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                <ZoomLink href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Home
-                </Link>
+                </ZoomLink>
               </li>
               <li>
-                <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors">
+                <ZoomLink href="/faq" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   FAQ
-                </Link>
+                </ZoomLink>
               </li>
               <li>
-                <Link href="/join" className="text-muted-foreground hover:text-foreground transition-colors">
+                <ZoomLink href="/join" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Join
-                </Link>
+                </ZoomLink>
               </li>
             </ul>
           </div>

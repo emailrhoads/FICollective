@@ -2,13 +2,18 @@ import Navigation from "@/components/Navigation";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import ZoomLink from "@/components/ZoomLink";
+import { useLocation } from "wouter";
+import PageTransition from "@/components/PageTransition";
 
 export default function FAQ() {
+  const [location] = useLocation();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1">
+      <PageTransition location={location}>
+        <main className="flex-1">
         <div className="py-12 px-4 text-center">
           <pre className="text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight mx-auto">
 {`███████╗ █████╗  ██████╗ 
@@ -39,15 +44,16 @@ export default function FAQ() {
               <Button className="font-mono" data-testid="button-contact">
                 [ CONTACT US ]
               </Button>
-              <Link href="/join">
+              <ZoomLink href="/join">
                 <Button variant="outline" className="font-mono" data-testid="button-faq-join">
                   [ JOIN NOW ]
                 </Button>
-              </Link>
+              </ZoomLink>
             </div>
           </div>
         </div>
-      </main>
+        </main>
+      </PageTransition>
       <Footer />
     </div>
   );

@@ -5,13 +5,18 @@ import LocationMap from "@/components/LocationMap";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import ZoomLink from "@/components/ZoomLink";
+import { useLocation } from "wouter";
+import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
+  const [location] = useLocation();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1">
+      <PageTransition location={location}>
+        <main className="flex-1">
         <Hero />
         
         <section className="py-16 px-4 bg-muted/30">
@@ -34,11 +39,11 @@ export default function Home() {
                   passive income goals to confused coworkers - here, everyone gets it.
                 </p>
                 <div className="flex justify-center pt-4">
-                  <Link href="/join">
+                  <ZoomLink href="/join">
                     <Button className="font-mono" data-testid="button-cta-whatisfi">
                       [ START YOUR FI JOURNEY ]
                     </Button>
-                  </Link>
+                  </ZoomLink>
                 </div>
               </div>
             </Card>
@@ -47,7 +52,8 @@ export default function Home() {
 
         <FeatureGrid />
         <LocationMap />
-      </main>
+        </main>
+      </PageTransition>
       <Footer />
     </div>
   );

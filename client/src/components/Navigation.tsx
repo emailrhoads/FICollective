@@ -1,7 +1,8 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import ZoomLink from "./ZoomLink";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -17,7 +18,7 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center hover-elevate active-elevate-2 px-2 py-1 rounded-md">
+          <ZoomLink href="/" className="flex items-center hover-elevate active-elevate-2 px-2 py-1 rounded-md cursor-pointer">
             <pre className="text-sm md:text-base font-bold text-foreground leading-none">
 {`███████╗██╗
 ██╔════╝██║
@@ -26,11 +27,11 @@ export default function Navigation() {
 ██║     ██║
 ╚═╝     ╚═╝`}
             </pre>
-          </Link>
+          </ZoomLink>
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <Link key={item.path} href={item.path}>
+              <ZoomLink key={item.path} href={item.path}>
                 <Button
                   variant={location === item.path ? "secondary" : "ghost"}
                   className="font-mono text-sm"
@@ -38,7 +39,7 @@ export default function Navigation() {
                 >
                   {location === item.path ? `[ ${item.label} ]` : item.label}
                 </Button>
-              </Link>
+              </ZoomLink>
             ))}
           </div>
 
@@ -57,7 +58,7 @@ export default function Navigation() {
           <div className="md:hidden pb-4 border-t border-border mt-2 pt-4">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <Link key={item.path} href={item.path}>
+                <ZoomLink key={item.path} href={item.path}>
                   <Button
                     variant={location === item.path ? "secondary" : "ghost"}
                     className="w-full font-mono text-sm justify-start"
@@ -66,7 +67,7 @@ export default function Navigation() {
                   >
                     {location === item.path ? `▸ [ ${item.label} ]` : `▸ ${item.label}`}
                   </Button>
-                </Link>
+                </ZoomLink>
               ))}
             </div>
           </div>

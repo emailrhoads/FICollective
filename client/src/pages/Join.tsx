@@ -7,8 +7,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
+import { useLocation } from "wouter";
+import PageTransition from "@/components/PageTransition";
 
 export default function Join() {
+  const [location] = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +27,8 @@ export default function Join() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <main className="flex-1">
+      <PageTransition location={location}>
+        <main className="flex-1">
         <div className="py-12 px-4 text-center">
           <pre className="text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight mx-auto">
 {`     ██╗ ██████╗ ██╗███╗   ██╗
@@ -121,7 +125,8 @@ export default function Join() {
             </Card>
           </div>
         </section>
-      </main>
+        </main>
+      </PageTransition>
       <Footer />
     </div>
   );
