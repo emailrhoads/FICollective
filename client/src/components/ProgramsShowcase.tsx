@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Calendar, Users, BookOpen, Heart, Presentation, Lightbulb } from "lucide-react";
-import communityImage from "@assets/generated_images/Jovial_mixed-gender_community_dinner_ed95d9fd.png";
+import { Calendar, Users, BookOpen, Heart, Presentation, Lightbulb, MessageSquare } from "lucide-react";
+import communityImage from "@assets/generated_images/Minimalist_table_setting_line_drawing_2e1f611d.png";
 import moneyPlantIcon from "@assets/generated_images/Money_plant_illustration_6a80ce05.png";
 import bookIcon from "@assets/generated_images/Book_learning_illustration_454db821.png";
 import handsIcon from "@assets/generated_images/Helping_hands_illustration_e1cfca0d.png";
@@ -67,6 +67,18 @@ export default function ProgramsShowcase() {
                       <h4 className="font-display font-semibold text-foreground mb-2">Seasonal Celebrations</h4>
                       <p className="font-display text-muted-foreground italic">
                         Mark the seasons together—spring plantings, summer growth, autumn harvests, winter planning. These celebrations make our garden feel like home.
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-6 border-2 border-l-4 border-l-primary rounded-sm">
+                  <div className="flex items-start gap-4">
+                    <MessageSquare className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-display font-semibold text-foreground mb-2">Garden Commons Chat</h4>
+                      <p className="font-display text-muted-foreground italic">
+                        Online gathering space where seeds of ideas are planted spontaneously. Share cultivation discoveries, ask fellow gardeners questions, and watch insights sprout in real-time conversation.
                       </p>
                     </div>
                   </div>
