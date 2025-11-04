@@ -23,7 +23,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-          A co-working space and community for people pursuing financial freedom. Weekly dinners, expert speakers, skill workshops, and community impact—all in Longmont, Colorado.
+          A co-working space and community for people pursuing financial freedom. Weekly dinners, expert speakers, skill workshops, and community impact—all at our headquarters on Main Street in Longmont, Colorado.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

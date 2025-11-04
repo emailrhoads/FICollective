@@ -7,10 +7,10 @@ export default function LocationMap() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
-            Visit Us on Main Street
+            Visit Our Headquarters
           </h2>
           <p className="text-lg text-muted-foreground">
-            Drop by anytime during open hours—we'd love to show you around! ☕
+            Our HQ building is located on Main Street in Longmont. Drop by during open hours—we'd love to show you around!
           </p>
         </div>
 
@@ -22,10 +22,10 @@ export default function LocationMap() {
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl mb-2 text-foreground">
-                  Location
+                  Headquarters
                 </h3>
                 <p className="text-muted-foreground">
-                  FI Collective<br />
+                  FI Collective HQ<br />
                   Main Street<br />
                   Longmont, CO 80501
                 </p>
@@ -87,7 +87,7 @@ export default function LocationMap() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="FI Collective Location on Main Street, Longmont"
+                title="FI Collective Headquarters on Main Street, Longmont"
               />
             </div>
           </Card>
