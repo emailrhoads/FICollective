@@ -16,7 +16,7 @@ export default function ProgramsShowcase() {
             Tending Our Garden Together
           </h2>
           <p className="font-display text-lg text-muted-foreground max-w-2xl mx-auto italic">
-            Spring plantings of knowledge. Summer growth of relationships. Autumn harvests of wisdom. Winter rest and reflection. Partaking in what we've grown, amongst friends.
+            Spring plantings of knowledge. Summer growth of relationships. Autumn harvests of wisdom. Winter rest and reflection. Growing and sharing amongst friends.
           </p>
           <div className="mt-6 w-32 h-px bg-border mx-auto"></div>
         </div>
@@ -43,7 +43,7 @@ export default function ProgramsShowcase() {
                   Partaking in the Harvest
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  The best fruits taste sweeter amongst those who helped you grow. Weekly dinners and celebrations where we partake together in what we've cultivated.
+                  The best fruits taste sweeter amongst those who help you grow. Weekly dinners and celebrations where we partake together.
                 </p>
               </div>
 
@@ -108,7 +108,7 @@ export default function ProgramsShowcase() {
                   Tending & Growing
                 </h3>
                 <p className="font-display text-lg text-muted-foreground leading-relaxed">
-                  Learn from master gardeners, share cultivation techniques, and tend your financial garden with expert guidance and peer wisdom.
+                  Learn from master gardeners, share cultivation techniques, and tend your garden with expert guidance and peer wisdom.
                 </p>
               </div>
 
@@ -192,7 +192,7 @@ export default function ProgramsShowcase() {
 
                 <Card className="p-6 bg-muted/50 border-2 rounded-sm">
                   <p className="font-display text-foreground italic leading-relaxed">
-                    "A thriving financial garden produces more than you can consume alone. True wealth means partaking in the harvest amongst those who helped you grow, and teaching those still learning to plant."
+                    "True wealth means partaking in the harvest alongside others, and teaching those still learning to plant."
                   </p>
                   <p className="font-display text-sm text-muted-foreground mt-2">— Garden Wisdom, FI Collective</p>
                 </Card>
