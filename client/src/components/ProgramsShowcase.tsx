@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Calendar, Users, BookOpen, Heart, Presentation, Lightbulb } from "lucide-react";
-import communityImage from "@assets/generated_images/Illustrated_community_dinner_04a805e7.png";
+import communityImage from "@assets/generated_images/Jovial_mixed-gender_community_dinner_ed95d9fd.png";
 import moneyPlantIcon from "@assets/generated_images/Money_plant_illustration_6a80ce05.png";
 import bookIcon from "@assets/generated_images/Book_learning_illustration_454db821.png";
 import handsIcon from "@assets/generated_images/Helping_hands_illustration_e1cfca0d.png";
