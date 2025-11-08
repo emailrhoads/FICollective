@@ -73,12 +73,9 @@ export default function Join() {
               </Card>
 
               {/* Co-working Membership */}
-              <Card className="p-8 md:p-10 rounded-lg border-2 border-primary hover-elevate bg-primary/5">
+              <Card className="p-8 md:p-10 rounded-lg border-2 hover-elevate">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
-                    <div className="inline-block bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold mb-3">
-                      Most Popular
-                    </div>
                     <h2 className="text-3xl font-bold text-foreground mb-2">
                       Co-working Membership
                     </h2>
