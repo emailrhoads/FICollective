@@ -13,8 +13,8 @@ export default function Footer() {
               </span>
               <span className="font-mono text-xs text-muted-foreground">EST. 2024</span>
             </div>
-            <p className="font-display text-muted-foreground leading-relaxed italic">
-              A curated community and workspace for those pursuing financial independence.
+            <p className="text-muted-foreground leading-relaxed">
+              A fun, vibrant community for people crushing early retirement together.
             </p>
           </div>
 
@@ -29,11 +29,6 @@ export default function Footer() {
                 </ZoomLink>
               </li>
               <li>
-                <ZoomLink href="/faq" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-                  FAQ
-                </ZoomLink>
-              </li>
-              <li>
                 <ZoomLink href="/join" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Membership
                 </ZoomLink>
@@ -43,13 +38,13 @@ export default function Footer() {
 
           <div>
             <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
-              Programs
+              Events
             </h4>
-            <ul className="space-y-3 font-display text-muted-foreground italic">
-              <li>Weekly Dinners</li>
-              <li>Speaker Series</li>
-              <li>Workshops</li>
-              <li>Community Service</li>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>Tuesday Potlucks</li>
+              <li>FI Classes</li>
+              <li>Music Jams</li>
+              <li>Dance Parties</li>
             </ul>
           </div>
 
@@ -68,15 +63,15 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span className="italic">FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
+                <span>FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t-2 border-border pt-8 text-center">
-          <p className="font-display text-sm text-muted-foreground italic">
-            © 2024 FI Collective. All rights reserved. Archivum perpetuum.
+          <p className="text-sm text-muted-foreground">
+            © 2024 FI Collective. All rights reserved.
           </p>
         </div>
       </div>
