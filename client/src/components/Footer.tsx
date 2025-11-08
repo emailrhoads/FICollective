@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="font-display font-bold text-xl text-foreground italic">
+              <span className="font-bold text-xl text-foreground">
                 FI Collective
               </span>
-              <span className="font-mono text-xs text-muted-foreground">EST. 2024</span>
+              <span className="text-xs text-muted-foreground">EST. 2024</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               A fun, vibrant community for people crushing early retirement together.
@@ -19,10 +19,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
+            <h4 className="text-sm font-semibold text-foreground mb-4">
               Navigate
             </h4>
-            <ul className="space-y-3 font-display">
+            <ul className="space-y-3">
               <li>
                 <ZoomLink href="/" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Home
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
+            <h4 className="text-sm font-semibold text-foreground mb-4">
               Events
             </h4>
             <ul className="space-y-3 text-muted-foreground">
@@ -49,10 +49,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-mono text-xs tracking-wider uppercase text-foreground mb-4">
+            <h4 className="text-sm font-semibold text-foreground mb-4">
               Contact
             </h4>
-            <ul className="space-y-3 font-display text-muted-foreground">
+            <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 hello@ficollective.com
