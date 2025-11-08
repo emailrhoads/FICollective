@@ -1,10 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ZoomLink from "@/components/ZoomLink";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
+import { useLocation } from "wouter";
 
 export default function About() {
+  const [location] = useLocation();
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <PageTransition location={location}>
+        <main className="flex-1">
       {/* Hero Section */}
       <section className="py-20 md:py-32 px-8 md:px-16 bg-gradient-to-br from-primary/10 to-background">
         <div className="max-w-4xl mx-auto text-center">
@@ -126,6 +135,9 @@ export default function About() {
           </Card>
         </div>
       </section>
+        </main>
+      </PageTransition>
+      <Footer />
     </div>
   );
 }
