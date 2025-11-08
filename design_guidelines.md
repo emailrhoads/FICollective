@@ -10,15 +10,14 @@
 
 ## Typography Hierarchy
 
-**Primary Font**: 'Inter' or 'DM Sans' (clean, modern sans-serif that's easy to read and friendly)
-**Accent Font**: 'Space Grotesk' for headings (geometric, bold, has personality)
+**Primary Font**: 'Poppins' (modern, friendly sans-serif with excellent readability and personality)
 
-- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight (Space Grotesk)
-- Section Headers: text-4xl md:text-5xl, font-bold (Space Grotesk)
-- Subheadings: text-xl md:text-2xl, font-semibold (Space Grotesk)
-- Body Text: text-base md:text-lg, leading-relaxed (Inter/DM Sans)
-- Labels: text-sm md:text-base, font-medium, uppercase tracking-wide (Space Grotesk)
-- Fun callouts: text-lg, font-medium (Inter/DM Sans)
+- Hero Headlines: text-5xl md:text-6xl lg:text-7xl, font-bold, tracking-tight (Poppins)
+- Section Headers: text-4xl md:text-5xl, font-bold (Poppins)
+- Subheadings: text-xl md:text-2xl, font-semibold (Poppins)
+- Body Text: text-base md:text-lg, leading-relaxed (Poppins)
+- Labels: text-sm md:text-base, font-medium (Poppins)
+- Fun callouts: text-lg, font-medium (Poppins)
 
 ## Color Philosophy
 

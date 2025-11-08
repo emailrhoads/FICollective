@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,10 +78,10 @@
   --chart-4: 135 30% 72%;
   --chart-5: 48 35% 78%;
 
-  --font-sans: 'Crimson Text', Georgia, serif;
-  --font-serif: 'Crimson Text', Georgia, serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Poppins', sans-serif;
   --font-mono: 'Courier New', Courier, monospace;
-  --font-display: 'Crimson Text', Georgia, serif;
+  --font-display: 'Poppins', sans-serif;
   --radius: .25rem;
   --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.08);
