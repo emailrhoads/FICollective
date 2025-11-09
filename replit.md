@@ -16,11 +16,13 @@ The application is built as a full-stack TypeScript monorepo with a React fronte
 - Updated all CSS font variables and design guidelines to reflect new typography
 
 **Community Photos Integration (November 9, 2024):**
-- Optimized 8 community photos for web using Sharp (1200x800 max, 85% quality JPEG)
-- Added "Community in Action" photo gallery section to About page with all 8 photos
-- Added 2 photos to Join page for visual appeal
-- Implemented lazy loading for all images to improve performance
-- Images include proper alt text and data-testid attributes for accessibility and testing
+- Optimized 10 community photos for web using Sharp (1200x800 max, 85% quality JPEG)
+- Added hiking group photo under hero text "We're a collection of people..." on About page
+- Added indoor group photo above "It's a fun, vibrant community" text on About page
+- Converted "Community in Action" static gallery to interactive carousel using embla-carousel-react
+- Carousel shows 1-3 images depending on screen size (responsive)
+- Includes Previous/Next navigation buttons and keyboard support (arrow keys)
+- All images use lazy loading for performance, with proper alt text and data-testid attributes for accessibility
 
 **Content Updates:**
 - About page now serves as the homepage
