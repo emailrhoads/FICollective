@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import ZoomLink from "@/components/ZoomLink";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -13,6 +14,8 @@ import clothingSwap from "@assets/optimized/clothing-swap.jpg";
 import birthdayCake from "@assets/optimized/birthday-cake.jpg";
 import hikingGroup from "@assets/optimized/hiking-group.jpg";
 import outdoorGym from "@assets/optimized/outdoor-gym.jpg";
+import hikingGroupNew from "@assets/community/hiking-group.jpg";
+import indoorGroup from "@assets/community/indoor-group.jpg";
 
 export default function About() {
   const [location] = useLocation();
@@ -31,6 +34,17 @@ export default function About() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
             We're a collection of people who love having fun and are intentional about building community.
           </p>
+          
+          {/* Hiking group photo */}
+          <div className="mt-12 rounded-lg overflow-hidden max-w-2xl mx-auto">
+            <img 
+              src={hikingGroupNew} 
+              alt="FI Collective members enjoying a mountain hiking adventure together" 
+              className="w-full h-auto object-cover"
+              loading="eager"
+              data-testid="img-hero-hiking"
+            />
+          </div>
         </div>
       </section>
 
