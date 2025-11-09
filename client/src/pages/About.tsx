@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { useLocation } from "wouter";
+import Autoplay from "embla-carousel-autoplay";
 import outdoorPresentation from "@assets/optimized/outdoor-presentation.jpg";
 import cookingEvent from "@assets/optimized/cooking-event.jpg";
 import outdoorCelebration from "@assets/optimized/outdoor-celebration.jpg";
@@ -19,6 +21,22 @@ import indoorGroup from "@assets/community/indoor-group.jpg";
 
 export default function About() {
   const [location] = useLocation();
+  
+  const autoplay = useRef(
+    Autoplay({
+      delay: 5000,
+      stopOnInteraction: true,
+      stopOnMouseEnter: true,
+      stopOnFocusIn: true,
+    })
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) {
+      autoplay.current.stop();
+    }
+  }, []);
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -164,6 +182,7 @@ export default function About() {
             
             <Carousel 
               opts={{ loop: true, align: "start" }}
+              plugins={[autoplay.current]}
               className="w-full max-w-5xl mx-auto"
               data-testid="carousel-community"
             >
@@ -274,11 +293,13 @@ export default function About() {
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious 
-                className="left-0 md:-left-12" 
+                variant="secondary"
+                className="left-2 md:-left-12 backdrop-blur-sm bg-background/80 border-2 shadow-lg" 
                 data-testid="button-carousel-prev"
               />
               <CarouselNext 
-                className="right-0 md:-right-12"
+                variant="secondary"
+                className="right-2 md:-right-12 backdrop-blur-sm bg-background/80 border-2 shadow-lg"
                 data-testid="button-carousel-next"
               />
             </Carousel>
