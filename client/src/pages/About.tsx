@@ -59,6 +59,18 @@ export default function About() {
             <p className="text-lg leading-relaxed text-foreground">
               Have you heard those statistics saying that people who retire young tend to die earlier because they lose all sense of purpose? We laugh in the face of those statistics, because here at FI Collective, we're busy cooking for weekly potlucks, planning fun adventures, holding musical jam sessions, creating personal finance classes, and so much more.
             </p>
+            
+            {/* Indoor group photo */}
+            <div className="my-8 rounded-lg overflow-hidden">
+              <img 
+                src={indoorGroup} 
+                alt="FI Collective community members gathering together indoors" 
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                data-testid="img-indoor-group"
+              />
+            </div>
+            
             <p className="text-lg leading-relaxed text-foreground font-semibold">
               It's a fun, vibrant community.
             </p>
@@ -141,7 +153,7 @@ export default function About() {
             </Card>
           </div>
 
-          {/* Photo Gallery Section */}
+          {/* Photo Carousel Section */}
           <div className="mt-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-center">
               Community in Action
@@ -150,80 +162,126 @@ export default function About() {
               See what we're all about! Here are some snapshots from our events, adventures, and everyday moments at FI Collective.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={cookingEvent} 
-                  alt="Members cooking together at a community potluck event" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-cooking-event"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={outdoorCelebration} 
-                  alt="Outdoor celebration with birthday cake" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-outdoor-celebration"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={balloonEvent} 
-                  alt="Fun community event with colorful balloons" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-balloon-event"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={hikingGroup} 
-                  alt="FI Collective members on a group hiking adventure" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-hiking-group"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={clothingSwap} 
-                  alt="Community clothing swap event" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-clothing-swap"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={birthdayCake} 
-                  alt="Members celebrating together with cake" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-birthday-cake"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate md:col-span-2">
-                <img 
-                  src={outdoorPresentation} 
-                  alt="Outdoor presentation event at FI Collective" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-outdoor-presentation"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg hover-elevate">
-                <img 
-                  src={outdoorGym} 
-                  alt="Member working out at the outdoor gym space" 
-                  className="w-full h-64 object-cover"
-                  loading="lazy"
-                  data-testid="img-outdoor-gym"
-                />
-              </div>
-            </div>
+            <Carousel 
+              opts={{ loop: true, align: "start" }}
+              className="w-full max-w-5xl mx-auto"
+              data-testid="carousel-community"
+            >
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={cookingEvent} 
+                        alt="Members cooking together at a community potluck event" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-cooking-event"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={outdoorCelebration} 
+                        alt="Outdoor celebration with birthday cake" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-outdoor-celebration"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={balloonEvent} 
+                        alt="Fun community event with colorful balloons" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-balloon-event"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={hikingGroup} 
+                        alt="FI Collective members on a group hiking adventure" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-hiking-group"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={clothingSwap} 
+                        alt="Community clothing swap event" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-clothing-swap"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={birthdayCake} 
+                        alt="Members celebrating together with cake" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-birthday-cake"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={outdoorPresentation} 
+                        alt="Outdoor presentation event at FI Collective" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-outdoor-presentation"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="overflow-hidden rounded-lg">
+                      <img 
+                        src={outdoorGym} 
+                        alt="Member working out at the outdoor gym space" 
+                        className="w-full h-80 object-cover"
+                        loading="lazy"
+                        data-testid="img-outdoor-gym"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious 
+                className="left-0 md:-left-12" 
+                data-testid="button-carousel-prev"
+              />
+              <CarouselNext 
+                className="right-0 md:-right-12"
+                data-testid="button-carousel-next"
+              />
+            </Carousel>
           </div>
 
           {/* CampFI Section */}
