@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <script>
+      // Apply saved theme immediately to prevent flash
+      (function() {
+        var savedTheme = localStorage.getItem('fi-collective-theme') || 'default';
+        document.documentElement.classList.add('theme-' + savedTheme);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

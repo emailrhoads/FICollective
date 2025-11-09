@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ZoomLink from "./ZoomLink";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -36,17 +37,21 @@ export default function Navigation() {
                 </Button>
               </ZoomLink>
             ))}
+            <ThemeSelector />
           </div>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden rounded-sm"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            data-testid="button-mobile-menu"
-          >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeSelector />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              data-testid="button-mobile-menu"
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {mobileMenuOpen && (

@@ -1,0 +1,74 @@
+/* Mountain Theme - Muted Earth Tones & Sky Blues */
+.theme-mountain {
+  --background: 200 20% 96%;
+  --foreground: 25 30% 25%;
+  --border: 200 12% 80%;
+  --card: 35 25% 97%;
+  --card-foreground: 25 30% 25%;
+  --card-border: 200 12% 75%;
+  --sidebar: 200 15% 92%;
+  --sidebar-foreground: 25 30% 25%;
+  --sidebar-border: 200 12% 80%;
+  --sidebar-primary: 200 35% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 200 20% 85%;
+  --sidebar-accent-foreground: 25 30% 25%;
+  --sidebar-ring: 200 35% 55%;
+  --popover: 35 25% 97%;
+  --popover-foreground: 25 30% 25%;
+  --popover-border: 200 12% 75%;
+  --primary: 200 35% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 25 20% 85%;
+  --secondary-foreground: 25 30% 25%;
+  --muted: 200 15% 90%;
+  --muted-foreground: 25 20% 45%;
+  --accent: 35 35% 80%;
+  --accent-foreground: 25 30% 25%;
+  --destructive: 15 60% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 200 12% 84%;
+  --ring: 200 35% 55%;
+  --chart-1: 200 35% 58%;
+  --chart-2: 25 30% 60%;
+  --chart-3: 35 35% 70%;
+  --chart-4: 150 25% 65%;
+  --chart-5: 180 25% 68%;
+}
+
+.theme-mountain.dark {
+  --background: 200 20% 14%;
+  --foreground: 35 20% 88%;
+  --border: 200 15% 24%;
+  --card: 200 18% 17%;
+  --card-foreground: 35 20% 88%;
+  --card-border: 200 15% 24%;
+  --sidebar: 200 22% 12%;
+  --sidebar-foreground: 35 20% 88%;
+  --sidebar-border: 200 15% 24%;
+  --sidebar-primary: 200 30% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 200 18% 22%;
+  --sidebar-accent-foreground: 35 20% 88%;
+  --sidebar-ring: 200 30% 50%;
+  --popover: 200 18% 17%;
+  --popover-foreground: 35 20% 88%;
+  --popover-border: 200 15% 24%;
+  --primary: 200 30% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 25 15% 22%;
+  --secondary-foreground: 35 20% 88%;
+  --muted: 200 15% 20%;
+  --muted-foreground: 35 15% 60%;
+  --accent: 35 25% 30%;
+  --accent-foreground: 35 20% 88%;
+  --destructive: 15 55% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 200 15% 24%;
+  --ring: 200 30% 50%;
+  --chart-1: 200 30% 50%;
+  --chart-2: 25 25% 48%;
+  --chart-3: 35 30% 52%;
+  --chart-4: 150 22% 50%;
+  --chart-5: 180 22% 52%;
+}

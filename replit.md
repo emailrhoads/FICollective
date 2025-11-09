@@ -167,6 +167,44 @@ users: {
 - Design references CampFI community and mentions virtual meetings capability
 - Membership content suggests Stripe or similar payment processor will be needed
 
+## Theme System
+
+The application includes a multi-theme system allowing the design committee to switch between different visual themes from the UI.
+
+### Available Themes
+1. **Green & Natural (default)** - Original green/natural color scheme with warm tones
+2. **Mountain Vista** - Muted earth tones and sky blues inspired by mountain landscapes
+3. **Line Art** - High-contrast black and white theme
+
+### Technical Implementation
+
+**Theme Architecture:**
+- Each theme is defined in a separate CSS file in `client/src/themes/`
+- Theme CSS files define all color variables using CSS custom properties
+- Themes are applied by adding a class to the document root (e.g., `theme-default`, `theme-mountain`, `theme-line-art`)
+- The base `index.css` contains only non-color variables (fonts, shadows, etc.)
+
+**Theme Files:**
+- `client/src/themes/default.css` - Green & Natural theme
+- `client/src/themes/mountain.css` - Mountain Vista theme
+- `client/src/themes/line-art.css` - Line Art theme
+
+**ThemeSelector Component:**
+- Located at `client/src/components/ThemeSelector.tsx`
+- Integrated into the Navigation component
+- Saves theme preference to localStorage (key: `fi-collective-theme`)
+- Pre-hydration script in `index.html` applies saved theme to prevent flash of unstyled content
+
+**Adding New Themes:**
+1. Create a new CSS file in `client/src/themes/` (e.g., `new-theme.css`)
+2. Define all color variables under a theme class (e.g., `.theme-new-theme`)
+3. Include both light mode (on the theme class) and dark mode (on `.theme-new-theme.dark`)
+4. Import the CSS file at the top of `client/src/index.css`
+5. Add the theme to the `themes` array in `ThemeSelector.tsx`
+
+**Color Variables to Define:**
+Each theme must define: --background, --foreground, --card, --card-foreground, --card-border, --primary, --primary-foreground, --secondary, --secondary-foreground, --muted, --muted-foreground, --accent, --accent-foreground, --destructive, --destructive-foreground, --border, --input, --ring, --sidebar-*, --popover-*, --chart-1 through --chart-5
+
 ## Community Information
 
 **Location:** 712 Main St, Longmont, CO 80501  
@@ -176,7 +214,7 @@ users: {
 **Membership Tiers:**
 1. Individual Community Membership - $400/year
 2. Family Community Membership - $600/year
-3. Co-working Membership - $1,000/year ($1,200 semiannually) - Most popular
+3. Co-working Membership - $1,000/year ($1,200 semiannually)
 4. Remote Membership - $100/year (for members 30+ miles away)
 5. July Pass - $50 (for CampFI Rocky Mountain attendees)
 
