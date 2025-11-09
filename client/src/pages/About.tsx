@@ -5,6 +5,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { useLocation } from "wouter";
+import outdoorPresentation from "@assets/optimized/outdoor-presentation.jpg";
+import cookingEvent from "@assets/optimized/cooking-event.jpg";
+import outdoorCelebration from "@assets/optimized/outdoor-celebration.jpg";
+import balloonEvent from "@assets/optimized/balloon-event.jpg";
+import clothingSwap from "@assets/optimized/clothing-swap.jpg";
+import birthdayCake from "@assets/optimized/birthday-cake.jpg";
+import hikingGroup from "@assets/optimized/hiking-group.jpg";
+import outdoorGym from "@assets/optimized/outdoor-gym.jpg";
 
 export default function About() {
   const [location] = useLocation();
@@ -117,6 +125,83 @@ export default function About() {
                 And if none of THAT sounds appealing to you (honestly … none of it? really?), join the events committee and throw some other cool ideas out there!
               </p>
             </Card>
+          </div>
+
+          {/* Photo Gallery Section */}
+          <div className="mt-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground text-center">
+              Community in Action
+            </h2>
+            <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
+              See what we're all about! Here are some snapshots from our events, adventures, and everyday moments at FI Collective.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={cookingEvent} 
+                  alt="Members cooking together at a community potluck event" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-cooking-event"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={outdoorCelebration} 
+                  alt="Outdoor celebration with birthday cake" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-outdoor-celebration"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={balloonEvent} 
+                  alt="Fun community event with colorful balloons" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-balloon-event"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={hikingGroup} 
+                  alt="FI Collective members on a group hiking adventure" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-hiking-group"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={clothingSwap} 
+                  alt="Community clothing swap event" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-clothing-swap"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={birthdayCake} 
+                  alt="Members celebrating together with cake" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-birthday-cake"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate md:col-span-2">
+                <img 
+                  src={outdoorPresentation} 
+                  alt="Outdoor presentation event at FI Collective" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-outdoor-presentation"
+                />
+              </div>
+              <div className="overflow-hidden rounded-lg hover-elevate">
+                <img 
+                  src={outdoorGym} 
+                  alt="Member working out at the outdoor gym space" 
+                  className="w-full h-64 object-cover"
+                  data-testid="img-outdoor-gym"
+                />
+              </div>
+            </div>
           </div>
 
           {/* CampFI Section */}
