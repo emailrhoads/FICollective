@@ -25,7 +25,8 @@ export default function About() {
   const autoplay = useRef(
     Autoplay({
       delay: 5000,
-      stopOnInteraction: true,
+      playOnInit: true,
+      stopOnInteraction: false,
       stopOnMouseEnter: true,
       stopOnFocusIn: true,
     })
@@ -33,7 +34,7 @@ export default function About() {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mediaQuery.matches) {
+    if (mediaQuery.matches && autoplay.current) {
       autoplay.current.stop();
     }
   }, []);
@@ -185,6 +186,8 @@ export default function About() {
               plugins={[autoplay.current]}
               className="w-full max-w-5xl mx-auto"
               data-testid="carousel-community"
+              onMouseEnter={() => autoplay.current?.stop()}
+              onMouseLeave={() => autoplay.current?.play()}
             >
               <CarouselContent>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
