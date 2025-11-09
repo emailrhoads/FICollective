@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import PageTransition from "@/components/PageTransition";
 import { Check } from "lucide-react";
+import outdoorCelebration from "@assets/optimized/outdoor-celebration.jpg";
+import cookingEvent from "@assets/optimized/cooking-event.jpg";
 
 export default function Join() {
   const [location] = useLocation();
@@ -173,6 +175,32 @@ export default function Join() {
               <p className="text-lg text-muted-foreground">
                 <strong className="text-foreground">Payment Options:</strong> The July Pass and Remote memberships must be paid upfront. All other memberships may be paid annually or semiannually.
               </p>
+            </div>
+          </section>
+
+          {/* Photo Section */}
+          <section className="py-16 px-8 bg-muted/30">
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="overflow-hidden rounded-lg">
+                  <img 
+                    src={outdoorCelebration} 
+                    alt="FI Collective members celebrating together outdoors" 
+                    className="w-full h-80 object-cover hover-elevate"
+                    loading="lazy"
+                    data-testid="img-join-celebration"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-lg">
+                  <img 
+                    src={cookingEvent} 
+                    alt="Community members cooking together at a potluck" 
+                    className="w-full h-80 object-cover hover-elevate"
+                    loading="lazy"
+                    data-testid="img-join-cooking"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 

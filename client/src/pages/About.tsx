@@ -142,6 +142,7 @@ export default function About() {
                   src={cookingEvent} 
                   alt="Members cooking together at a community potluck event" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-cooking-event"
                 />
               </div>
@@ -150,6 +151,7 @@ export default function About() {
                   src={outdoorCelebration} 
                   alt="Outdoor celebration with birthday cake" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-outdoor-celebration"
                 />
               </div>
@@ -158,6 +160,7 @@ export default function About() {
                   src={balloonEvent} 
                   alt="Fun community event with colorful balloons" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-balloon-event"
                 />
               </div>
@@ -166,6 +169,7 @@ export default function About() {
                   src={hikingGroup} 
                   alt="FI Collective members on a group hiking adventure" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-hiking-group"
                 />
               </div>
@@ -174,6 +178,7 @@ export default function About() {
                   src={clothingSwap} 
                   alt="Community clothing swap event" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-clothing-swap"
                 />
               </div>
@@ -182,6 +187,7 @@ export default function About() {
                   src={birthdayCake} 
                   alt="Members celebrating together with cake" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-birthday-cake"
                 />
               </div>
@@ -190,6 +196,7 @@ export default function About() {
                   src={outdoorPresentation} 
                   alt="Outdoor presentation event at FI Collective" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-outdoor-presentation"
                 />
               </div>
@@ -198,6 +205,7 @@ export default function About() {
                   src={outdoorGym} 
                   alt="Member working out at the outdoor gym space" 
                   className="w-full h-64 object-cover"
+                  loading="lazy"
                   data-testid="img-outdoor-gym"
                 />
               </div>

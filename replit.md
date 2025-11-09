@@ -10,11 +10,24 @@ The application is built as a full-stack TypeScript monorepo with a React fronte
 
 **Design Transformation:** The site underwent a complete redesign from a vintage botanical/gardening theme to a fun, energetic, "kick butt" community vibe based on design committee feedback. All gardening metaphors, Latin text, botanical decorative elements (❦, ✺), and vintage styling have been removed in favor of casual, conversational copy with personality.
 
+**Typography Update (November 9, 2024):**
+- Changed entire site to use Poppins font family (replacing Crimson Text/Inter/Space Grotesk)
+- Imported Poppins from Google Fonts with weights 300-800
+- Updated all CSS font variables and design guidelines to reflect new typography
+
+**Community Photos Integration (November 9, 2024):**
+- Optimized 8 community photos for web using Sharp (1200x800 max, 85% quality JPEG)
+- Added "Community in Action" photo gallery section to About page with all 8 photos
+- Added 2 photos to Join page for visual appeal
+- Implemented lazy loading for all images to improve performance
+- Images include proper alt text and data-testid attributes for accessibility and testing
+
 **Content Updates:**
 - About page now serves as the homepage
 - Removed old Home and FAQ pages from routing
 - Updated membership tiers with new pricing and conversational copy
 - Refreshed Navigation and Footer to match new design tone
+- Removed "Most Popular" badge and special styling from co-working membership tier
 
 ## User Preferences
 
@@ -34,7 +47,7 @@ Preferred communication style: Simple, everyday language.
 - Tailwind CSS for utility-first styling with a custom design system
 - Custom color scheme using CSS variables (HSL format) for theming flexibility
 - Design philosophy emphasizes "fun, vibrant, energetic" aesthetics over muted/botanical themes
-- Typography hierarchy using Inter/DM Sans for body text and Space Grotesk for headings
+- Typography: Poppins font family throughout the site (imported from Google Fonts)
 
 **State Management:**
 - TanStack Query (React Query) for server state management and API data fetching
