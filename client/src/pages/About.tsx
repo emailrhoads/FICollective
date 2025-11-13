@@ -339,6 +339,7 @@ export default function About() {
               </div>
 
               {/* CampFI Section */}
+              {/*
               <Card className="p-8 md:p-12 bg-primary/10 border-2 rounded-lg mt-16">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
                   Hey, CampFI friends!
@@ -358,6 +359,7 @@ export default function About() {
                   </Button>
                 </ZoomLink>
               </Card>
+              */}
             </div>
           </section>
         </main>

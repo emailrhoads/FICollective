@@ -52,6 +52,33 @@ export default function Join() {
                 </div>
               </Card>
 
+              {/* PayPal Button for Individual Membership */}
+              <div className="mt-6 text-center">
+                <div id="paypal-button-container-P-6GR12858X3850273RNEKNY5I"></div>
+                <script src="https://www.paypal.com/sdk/js?client-id=ARcXZ6rUvr1HOszG7zMdek1ZJrtSGipZVjMSTrEh648Y34wRUBOlB19DL8oqYkSOIrlUcKl2Q9P3CkGp&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                <script dangerouslySetInnerHTML={{
+                  __html: `
+                    paypal.Buttons({
+                        style: {
+                            shape: 'rect',
+                            color: 'gold',
+                            layout: 'vertical',
+                            label: 'subscribe'
+                        },
+                        createSubscription: function(data, actions) {
+                          return actions.subscription.create({
+                            /* Creates the subscription */
+                            plan_id: 'P-6GR12858X3850273RNEKNY5I'
+                          });
+                        },
+                        onApprove: function(data, actions) {
+                          alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                        }
+                    }).render('#paypal-button-container-P-6GR12858X3850273RNEKNY5I'); // Renders the PayPal button
+                  `
+                }} />
+              </div>
+
               {/* Family Community Membership */}
               <Card className="p-8 md:p-10 rounded-lg border-2 hover-elevate">
                 <div className="grid md:grid-cols-3 gap-8">
@@ -146,6 +173,7 @@ export default function Join() {
               </Card>
 
               {/* July Pass */}
+              {/*
               <Card className="p-8 md:p-10 rounded-lg border-2 hover-elevate bg-accent/10">
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
@@ -166,6 +194,7 @@ export default function Join() {
                   </div>
                 </div>
               </Card>
+              */}
             </div>
           </section>
 
