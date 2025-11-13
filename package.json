@@ -4,6 +4,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "dev:local:kill": "kill -9 $(lsof -t -i:4001)",
+    "dev:local": "NODE_ENV=development PORT=4001 IS_LOCAL=true tsx server/index.ts",
     "dev": "NODE_ENV=development tsx server/index.ts",
     "dev:local": "NODE_ENV=development PORT=3011 tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",

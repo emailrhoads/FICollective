@@ -1,4 +1,4 @@
-/* Default Theme - Green & Natural */
+/* Default Theme - Green & Natural with Cozy Workspace Background */
 .theme-default {
   --background: 45 25% 97%;
   --foreground: 150 20% 20%;
@@ -36,6 +36,48 @@
   --chart-5: 48 35% 78%;
 }
 
+.theme-default::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/default-background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.theme-default::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      ellipse at center 40%,
+      hsla(var(--background), 0.4) 0%,
+      hsla(var(--background), 0.7) 40%,
+      hsla(var(--background), 0.85) 70%,
+      hsl(var(--background)) 100%
+    ),
+    linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsla(var(--background), 0.96) 50%,
+      hsla(var(--background), 0.92) 100%
+    );
+  z-index: -1;
+  pointer-events: none;
+}
+
 .theme-default.dark {
   --background: 150 18% 12%;
   --foreground: 45 25% 90%;
@@ -71,4 +113,47 @@
   --chart-3: 42 35% 55%;
   --chart-4: 135 25% 58%;
   --chart-5: 48 30% 62%;
+}
+
+.theme-default.dark::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/default-background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  z-index: -2;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: brightness(0.4) contrast(0.6);
+}
+
+.theme-default.dark::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      ellipse at center 40%,
+      hsla(var(--background), 0.3) 0%,
+      hsla(var(--background), 0.6) 40%,
+      hsla(var(--background), 0.8) 70%,
+      hsl(var(--background)) 100%
+    ),
+    linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsla(var(--background), 0.96) 50%,
+      hsla(var(--background), 0.92) 100%
+    );
+  z-index: -1;
+  pointer-events: none;
 }
