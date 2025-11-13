@@ -2,15 +2,65 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import PageTransition from "@/components/PageTransition";
 import { Check } from "lucide-react";
 import outdoorCelebration from "@assets/optimized/outdoor-celebration.jpg";
 import cookingEvent from "@assets/optimized/cooking-event.jpg";
 
+// Declare PayPal on window for TypeScript
+declare global {
+  interface Window {
+    paypal?: any;
+  }
+}
+
 export default function Join() {
   const [location] = useLocation();
+  const [showPayPalButton, setShowPayPalButton] = useState(false);
+
+  useEffect(() => {
+    // Load PayPal SDK if not already loaded
+    if (!window.paypal) {
+      const script = document.createElement('script');
+      script.src = 'https://www.paypal.com/sdk/js?client-id=ARcXZ6rUvr1HOszG7zMdek1ZJrtSGipZVjMSTrEh648Y34wRUBOlB19DL8oqYkSOIrlUcKl2Q9P3CkGp&vault=true&intent=subscription';
+      script.setAttribute('data-sdk-integration-source', 'button-factory');
+      script.onload = () => {
+        // Render PayPal button after SDK loads (only if button should be shown)
+        if (showPayPalButton && window.paypal && window.paypal.Buttons) {
+          renderPayPalButton();
+        }
+      };
+      document.head.appendChild(script);
+    } else {
+      // If PayPal is already loaded, render button immediately if it should be shown
+      if (showPayPalButton && window.paypal && window.paypal.Buttons) {
+        renderPayPalButton();
+      }
+    }
+  }, [showPayPalButton]);
+
+  const renderPayPalButton = () => {
+    if (window.paypal && window.paypal.Buttons) {
+      window.paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+        },
+        createSubscription: function(data: any, actions: any) {
+          return actions.subscription.create({
+            plan_id: 'P-6GR12858X3850273RNEKNY5I'
+          });
+        },
+        onApprove: function(data: any, actions: any) {
+          alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        }
+      }).render('#paypal-button-container-P-6GR12858X3850273RNEKNY5I');
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -40,6 +90,19 @@ export default function Join() {
                     <p className="text-4xl font-bold text-primary mb-4">
                       $400<span className="text-lg text-muted-foreground font-normal">/year</span>
                     </p>
+                    {/* Membership Action Button */}
+                    {!showPayPalButton ? (
+                      <Button
+                        size="lg"
+                        className="text-base px-6 w-full"
+                        onClick={() => setShowPayPalButton(true)}
+                        data-testid="button-get-individual-membership"
+                      >
+                        Get this membership
+                      </Button>
+                    ) : (
+                      <div id="paypal-button-container-P-6GR12858X3850273RNEKNY5I" className="mt-4"></div>
+                    )}
                   </div>
                   <div className="md:col-span-2">
                     <p className="text-lg text-foreground leading-relaxed mb-4">
@@ -51,33 +114,6 @@ export default function Join() {
                   </div>
                 </div>
               </Card>
-
-              {/* PayPal Button for Individual Membership */}
-              <div className="mt-6 text-center">
-                <div id="paypal-button-container-P-6GR12858X3850273RNEKNY5I"></div>
-                <script src="https://www.paypal.com/sdk/js?client-id=ARcXZ6rUvr1HOszG7zMdek1ZJrtSGipZVjMSTrEh648Y34wRUBOlB19DL8oqYkSOIrlUcKl2Q9P3CkGp&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-                <script dangerouslySetInnerHTML={{
-                  __html: `
-                    paypal.Buttons({
-                        style: {
-                            shape: 'rect',
-                            color: 'gold',
-                            layout: 'vertical',
-                            label: 'subscribe'
-                        },
-                        createSubscription: function(data, actions) {
-                          return actions.subscription.create({
-                            /* Creates the subscription */
-                            plan_id: 'P-6GR12858X3850273RNEKNY5I'
-                          });
-                        },
-                        onApprove: function(data, actions) {
-                          alert(data.subscriptionID); // You can add optional success message for the subscriber here
-                        }
-                    }).render('#paypal-button-container-P-6GR12858X3850273RNEKNY5I'); // Renders the PayPal button
-                  `
-                }} />
-              </div>
 
               {/* Family Community Membership */}
               <Card className="p-8 md:p-10 rounded-lg border-2 hover-elevate">
