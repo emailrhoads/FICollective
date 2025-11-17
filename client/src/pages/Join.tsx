@@ -50,6 +50,12 @@ export default function Join() {
         renderPayPalButton('P-1FL18683A0289984ANELGA3Q', '#paypal-button-container-P-1FL18683A0289984ANELGA3Q');
       }
       if (showCoworkingPayPalButton) {
+        // Clear both potential coworking containers before rendering
+        const annualContainer = document.querySelector('#paypal-button-container-P-3TD53369042443245NELGCQQ');
+        const semiannualContainer = document.querySelector('#paypal-button-container-P-92W24717CH793553TNELGE2I');
+        if (annualContainer) annualContainer.innerHTML = '';
+        if (semiannualContainer) semiannualContainer.innerHTML = '';
+
         const coworkingPlanId = coworkingPaymentType === 'annual'
           ? 'P-3TD53369042443245NELGCQQ'
           : 'P-92W24717CH793553TNELGE2I';
@@ -66,6 +72,12 @@ export default function Join() {
 
   const renderPayPalButton = (planId: string, containerSelector: string) => {
     if (window.paypal && window.paypal.Buttons) {
+      // Clear the container before rendering a new button
+      const container = document.querySelector(containerSelector);
+      if (container) {
+        container.innerHTML = '';
+      }
+
       window.paypal.Buttons({
         style: {
           shape: 'rect',
