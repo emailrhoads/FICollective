@@ -19,6 +19,10 @@ declare global {
 export default function Join() {
   const [location] = useLocation();
   const [showPayPalButton, setShowPayPalButton] = useState(false);
+  const [showFamilyPayPalButton, setShowFamilyPayPalButton] = useState(false);
+  const [showCoworkingPayPalButton, setShowCoworkingPayPalButton] = useState(false);
+  const [showRemotePayPalButton, setShowRemotePayPalButton] = useState(false);
+  const [coworkingPaymentType, setCoworkingPaymentType] = useState<'annual' | 'semiannual'>('annual');
 
   useEffect(() => {
     // Load PayPal SDK if not already loaded
@@ -27,21 +31,40 @@ export default function Join() {
       script.src = 'https://www.paypal.com/sdk/js?client-id=ARcXZ6rUvr1HOszG7zMdek1ZJrtSGipZVjMSTrEh648Y34wRUBOlB19DL8oqYkSOIrlUcKl2Q9P3CkGp&vault=true&intent=subscription';
       script.setAttribute('data-sdk-integration-source', 'button-factory');
       script.onload = () => {
-        // Render PayPal button after SDK loads (only if button should be shown)
-        if (showPayPalButton && window.paypal && window.paypal.Buttons) {
-          renderPayPalButton();
-        }
+        // Render PayPal buttons after SDK loads
+        renderAllPayPalButtons();
       };
       document.head.appendChild(script);
     } else {
-      // If PayPal is already loaded, render button immediately if it should be shown
-      if (showPayPalButton && window.paypal && window.paypal.Buttons) {
-        renderPayPalButton();
+      // If PayPal is already loaded, render buttons immediately
+      renderAllPayPalButtons();
+    }
+  }, [showPayPalButton, showFamilyPayPalButton, showCoworkingPayPalButton, showRemotePayPalButton, coworkingPaymentType]);
+
+  const renderAllPayPalButtons = () => {
+    if (window.paypal && window.paypal.Buttons) {
+      if (showPayPalButton) {
+        renderPayPalButton('P-6GR12858X3850273RNEKNY5I', '#paypal-button-container-P-6GR12858X3850273RNEKNY5I');
+      }
+      if (showFamilyPayPalButton) {
+        renderPayPalButton('P-1FL18683A0289984ANELGA3Q', '#paypal-button-container-P-1FL18683A0289984ANELGA3Q');
+      }
+      if (showCoworkingPayPalButton) {
+        const coworkingPlanId = coworkingPaymentType === 'annual'
+          ? 'P-3TD53369042443245NELGCQQ'
+          : 'P-92W24717CH793553TNELGE2I';
+        const coworkingContainerId = coworkingPaymentType === 'annual'
+          ? '#paypal-button-container-P-3TD53369042443245NELGCQQ'
+          : '#paypal-button-container-P-92W24717CH793553TNELGE2I';
+        renderPayPalButton(coworkingPlanId, coworkingContainerId);
+      }
+      if (showRemotePayPalButton) {
+        renderPayPalButton('P-9XY50732SC610605YNELGDHA', '#paypal-button-container-P-9XY50732SC610605YNELGDHA');
       }
     }
-  }, [showPayPalButton]);
+  };
 
-  const renderPayPalButton = () => {
+  const renderPayPalButton = (planId: string, containerSelector: string) => {
     if (window.paypal && window.paypal.Buttons) {
       window.paypal.Buttons({
         style: {
@@ -52,13 +75,13 @@ export default function Join() {
         },
         createSubscription: function(data: any, actions: any) {
           return actions.subscription.create({
-            plan_id: 'P-6GR12858X3850273RNEKNY5I'
+            plan_id: planId
           });
         },
         onApprove: function(data: any, actions: any) {
           alert(data.subscriptionID); // You can add optional success message for the subscriber here
         }
-      }).render('#paypal-button-container-P-6GR12858X3850273RNEKNY5I');
+      }).render(containerSelector);
     }
   };
 
@@ -125,6 +148,19 @@ export default function Join() {
                     <p className="text-4xl font-bold text-primary mb-4">
                       $600<span className="text-lg text-muted-foreground font-normal">/year</span>
                     </p>
+                    {/* Family Membership Action Button */}
+                    {!showFamilyPayPalButton ? (
+                      <Button
+                        size="lg"
+                        className="text-base px-6 w-full"
+                        onClick={() => setShowFamilyPayPalButton(true)}
+                        data-testid="button-get-family-membership"
+                      >
+                        Get this membership
+                      </Button>
+                    ) : (
+                      <div id="paypal-button-container-P-1FL18683A0289984ANELGA3Q" className="mt-4"></div>
+                    )}
                   </div>
                   <div className="md:col-span-2">
                     <p className="text-lg text-foreground leading-relaxed mb-4">
@@ -144,12 +180,35 @@ export default function Join() {
                     <h2 className="text-3xl font-bold text-foreground mb-2">
                       Co-working Membership
                     </h2>
-                    <p className="text-4xl font-bold text-primary mb-1">
-                      $1,000<span className="text-lg text-muted-foreground font-normal">/year</span>
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      or $1,200 if paid semiannually
-                    </p>
+                    <div className="mb-4">
+                      <div className="flex gap-2 mb-2">
+                        <button
+                          onClick={() => setCoworkingPaymentType('annual')}
+                          className={`px-3 py-1 text-sm rounded ${coworkingPaymentType === 'annual' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}
+                        >
+                          Annual: $1,000
+                        </button>
+                        <button
+                          onClick={() => setCoworkingPaymentType('semiannual')}
+                          className={`px-3 py-1 text-sm rounded ${coworkingPaymentType === 'semiannual' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}
+                        >
+                          Semi-annual: $1,200
+                        </button>
+                      </div>
+                    </div>
+                    {/* Co-working Membership Action Button */}
+                    {!showCoworkingPayPalButton ? (
+                      <Button
+                        size="lg"
+                        className="text-base px-6 w-full"
+                        onClick={() => setShowCoworkingPayPalButton(true)}
+                        data-testid="button-get-coworking-membership"
+                      >
+                        Get this membership
+                      </Button>
+                    ) : (
+                      <div id={coworkingPaymentType === 'annual' ? 'paypal-button-container-P-3TD53369042443245NELGCQQ' : 'paypal-button-container-P-92W24717CH793553TNELGE2I'} className="mt-4"></div>
+                    )}
                   </div>
                   <div className="md:col-span-2">
                     <p className="text-lg text-foreground leading-relaxed mb-4">
@@ -175,6 +234,19 @@ export default function Join() {
                     <p className="text-4xl font-bold text-primary mb-4">
                       $100<span className="text-lg text-muted-foreground font-normal">/year</span>
                     </p>
+                    {/* Remote Membership Action Button */}
+                    {!showRemotePayPalButton ? (
+                      <Button
+                        size="lg"
+                        className="text-base px-6 w-full"
+                        onClick={() => setShowRemotePayPalButton(true)}
+                        data-testid="button-get-remote-membership"
+                      >
+                        Get this membership
+                      </Button>
+                    ) : (
+                      <div id="paypal-button-container-P-9XY50732SC610605YNELGDHA" className="mt-4"></div>
+                    )}
                   </div>
                   <div className="md:col-span-2">
                     <p className="text-lg text-foreground leading-relaxed mb-4">
