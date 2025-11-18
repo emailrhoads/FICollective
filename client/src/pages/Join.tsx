@@ -357,13 +357,10 @@ export default function Join() {
           <section className="py-20 px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Ready to join the fun?
+              Not sure yet?
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Reach out to us and let's get you set up with a membership!
-              </p>
               <Button size="lg" className="text-base px-8 rounded-lg" data-testid="button-contact">
-                Contact Us to Get Started
+                Schedule a tour
               </Button>
             </div>
           </section>
