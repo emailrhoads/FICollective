@@ -29,6 +29,21 @@ export default function Footer() {
                 </ZoomLink>
               </li>
               <li>
+                <a
+                  href="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FDenver"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                >
+                  Events
+                </a>
+              </li>
+              <li>
+                <ZoomLink href="/faq" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                  FAQ
+                </ZoomLink>
+              </li>
+              <li>
                 <ZoomLink href="/join" className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                   Membership
                 </ZoomLink>
