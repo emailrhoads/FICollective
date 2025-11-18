@@ -17,9 +17,9 @@ const themes = [
 export default function ThemeSelector() {
   const [currentTheme, setCurrentTheme] = useState<string>(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("fi-collective-theme") || "default";
+      return localStorage.getItem("fi-collective-theme") || "mountain";
     }
-    return "default";
+    return "mountain";
   });
 
   useEffect(() => {

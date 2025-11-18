@@ -3,7 +3,18 @@ import ZoomLink from "./ZoomLink";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('/hero-background.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Background overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40"></div>
+
       <div className="relative z-10 max-w-5xl mx-auto px-8 md:px-16 py-24 text-center">
         <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 mb-8 rounded-full">
           <span className="text-sm font-semibold text-primary uppercase tracking-wide">

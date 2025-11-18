@@ -322,7 +322,7 @@ export default function Join() {
           <section className="py-16 px-8 bg-muted/30">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-lg text-muted-foreground">
-                <strong className="text-foreground">Payment Options:</strong> The July Pass and Remote memberships must be paid upfront. All other memberships may be paid annually or semiannually.
+                <strong className="text-foreground">Payment Options:</strong> The July Pass and Remote memberships must be paid upfront.
               </p>
             </div>
           </section>

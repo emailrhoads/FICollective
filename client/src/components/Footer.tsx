@@ -57,10 +57,6 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 hello@ficollective.com
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                (555) 123-4567
-              </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                 <span>FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
