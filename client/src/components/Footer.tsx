@@ -38,18 +38,6 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">
-              Events
-            </h4>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>Tuesday Potlucks</li>
-              <li>FI Classes</li>
-              <li>Music Jams</li>
-              <li>Dance Parties</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-sm font-semibold text-foreground mb-4">
               Contact
             </h4>
             <ul className="space-y-3 text-muted-foreground">
@@ -59,7 +47,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
+                <a
+                  href="https://www.google.com/maps?q=712+Main+St,+Longmont,+CO+80501"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-foreground transition-colors cursor-pointer"
+                >
+                  <span>FI Collective HQ<br />712 Main St<br />Longmont, CO 80501</span>
+                </a>
               </li>
             </ul>
           </div>

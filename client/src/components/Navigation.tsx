@@ -11,6 +11,7 @@ export default function Navigation() {
 
   const navItems = [
     { path: "/", label: "Home" },
+    { path: "/faq", label: "FAQ" },
     { path: "/join", label: "Membership" },
   ];
 
@@ -37,6 +38,19 @@ export default function Navigation() {
                 </Button>
               </ZoomLink>
             ))}
+            <a
+              href="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FDenver"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                className="rounded-sm font-medium text-sm"
+                data-testid="link-nav-events"
+              >
+                Events
+              </Button>
+            </a>
             <ThemeSelector />
           </div>
 
@@ -69,6 +83,20 @@ export default function Navigation() {
                   </Button>
                 </ZoomLink>
               ))}
+              <a
+                href="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FDenver"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full rounded-sm justify-start text-sm"
+                  data-testid="link-mobile-nav-events"
+                >
+                  Events
+                </Button>
+              </a>
             </div>
           </div>
         )}
